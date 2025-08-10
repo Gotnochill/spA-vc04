@@ -1,219 +1,115 @@
-# Smart Pricing AI - Life Sciences E-Commerce Intelligence
+# Smart Pricing AI
 
-An AI-driven pricing intelligence system for life sciences e-commerce platforms, designed to optimize pricing strategies, shipping costs, and invoice generation.
+An AI-driven pricing intelligence system for life sciences e-commerce platforms. This system optimizes pricing strategies, estimates shipping costs, and generates dynamic invoices for laboratory equipment, reagents, and consumables.
 
-## 🎯 Hackathon Goal
+## Overview
 
-Build an intelligent system that maximizes margins in life sciences e-commerce through:
-- **Smart Pricing Engine**: Customer segmentation and price elasticity modeling
-- **Shipping Cost Estimator**: ML-powered weight inference and cost optimization  
+Smart Pricing AI addresses the complex pricing challenges in life sciences e-commerce by providing three integrated tools:
+
+- **Smart Pricing Engine**: Customer segmentation and price optimization
+- **Shipping Cost Estimator**: ML-powered weight inference and cost calculation
 - **Dynamic Invoice Generator**: Adaptive invoice structures with tariffs and fees
 
-## 🏗️ Architecture
+## Quick Start
 
-### Backend (FastAPI)
-- **Pricing API**: Customer segmentation, price recommendations, margin analysis
-- **Shipping API**: Cost estimation, weight inference, carrier optimization
-- **Invoice API**: Dynamic invoice generation, tariff calculation, promotion management
+### One-Click Startup (Windows)
+1. Open Command Prompt as Administrator
+2. Navigate to project directory: `cd d:\smartPricing`
+3. Run: `start-smart-pricing.bat`
 
-### Frontend (Next.js)
-- **Dashboard**: Key metrics and insights overview
-- **Pricing Module**: Interactive pricing recommendations and elasticity analysis
-- **Shipping Module**: Real-time shipping estimates and sourcing optimization
-- **Invoice Module**: Dynamic invoice generation and template management
+This automatically starts both backend and frontend servers and opens the application in your browser.
 
-### ML Models
-- Price elasticity modeling with Prophet for seasonality
-- Customer segmentation using clustering algorithms
-- Weight inference from product category and historical data
-
-## ✅ SYSTEM STATUS: FULLY OPERATIONAL! 🚀
-
-### ✅ Backend Server - RUNNING ✅
-- **Status**: 🟢 ONLINE and fully functional
-- **URL**: http://localhost:8000
-- **API Documentation**: http://localhost:8000/docs
-- **All 3 Core APIs**: Pricing, Shipping, Invoice - ALL WORKING
-
-### ✅ Test Dashboard - READY ✅  
-- **Comprehensive Test Interface**: `file:///d:/smartPricing/test_dashboard.html`
-- **Features**: Live API testing, performance monitoring, error handling
-- **Status Indicators**: Real-time system health monitoring
-
-### ✅ Sample Data & ML Models - GENERATED ✅
-- **Products**: 1000+ life sciences products generated
-- **Customers**: 200+ customers across 4 segments
-- **Transactions**: 5000+ historical transactions
-- **ML Models**: All 8 models trained and ready
-
-## 🌐 TESTING WEBSITES & ENDPOINTS
-
-### 1. 🧪 **COMPREHENSIVE TEST DASHBOARD** (PRIMARY TESTING SITE)
-**URL**: `file:///d:/smartPricing/test_dashboard.html`
-- ✅ Interactive testing interface
-- ✅ Real-time API status monitoring  
-- ✅ Performance and load testing
-- ✅ All API endpoints with sample data
-- ✅ Error handling and debugging info
-
-### 2. 📚 **API DOCUMENTATION** (SWAGGER UI)
-**URL**: http://localhost:8000/docs
-- ✅ Interactive API documentation
-- ✅ Try-it-now functionality
-- ✅ Request/response examples
-- ✅ Schema definitions
-
-### 3. 📖 **ALTERNATIVE API DOCS** (REDOC)
-**URL**: http://localhost:8000/redoc
-- ✅ Clean documentation interface
-- ✅ Detailed endpoint descriptions
-
-### 4. 🔧 **API ROOT ENDPOINT**
-**URL**: http://localhost:8000
-- ✅ Health check endpoint
-- ✅ System status information
-
-## 🎯 HACKATHON DEMO READY - TEST THESE FEATURES:
-
-### 💰 Smart Pricing Engine
-- **Test URL**: Use Test Dashboard → Pricing Tab
-- **Features**: Customer segmentation, price optimization, margin analysis
-- **Demo**: Shows 15-25% margin improvements by segment
-
-### 🚚 Shipping Cost Estimator  
-- **Test URL**: Use Test Dashboard → Shipping Tab
-- **Features**: ML weight inference, multi-carrier rates, international shipping
-- **Demo**: ±10% accuracy for known weights, ±20% for inferred
-
-### 📄 Dynamic Invoice Generator
-- **Test URL**: Use Test Dashboard → Invoice Tab  
-- **Features**: Adaptive fields, tariff calculation, promotion management
-- **Demo**: Dynamic tariffs, fees, and segment-specific templates
-
-### ⚡ Performance Testing
-- **Test URL**: Use Test Dashboard → Advanced Tab
-- **Features**: Load testing, stress testing, performance metrics
-- **Demo**: System handles 50+ concurrent requests
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.11+ installed and in PATH
-- Git (optional, for cloning)
-
-### Option 1: One-Click Startup (Windows)
-```cmd
-# Simply double-click start.bat or run in terminal:
-start.bat
-```
-
-### Option 2: Manual Setup
+### Manual Setup
 ```bash
-# Backend Setup
+# Backend
 python -m venv .venv
-.venv\Scripts\activate  # Windows
-# or: source .venv/bin/activate  # Linux/Mac
-
+.venv\Scripts\activate
 pip install -r backend/requirements.txt
 cd backend
-python -m uvicorn main:app --reload --host 127.0.0.1 --port 8000
+uvicorn main:app --reload
+
+# Frontend (in new terminal)
+cd frontend
+npm install
+npm run dev
 ```
 
-### Access the Application
-- **Backend API**: `http://127.0.0.1:8000`
-- **API Documentation**: `http://127.0.0.1:8000/docs`
-- **Demo Dashboard**: `file:///d:/smartPricing/demo.html` (or open demo.html in browser)
+## Application URLs
 
-## 📊 Key Features
+- **Frontend Dashboard**: http://localhost:3000
+- **Pricing Tool**: http://localhost:3000/pricing
+- **Shipping Tool**: http://localhost:3000/shipping
+- **Invoice Tool**: http://localhost:3000/invoices
+- **Backend API**: http://localhost:8000
+- **API Documentation**: http://localhost:8000/docs
 
-### 1. Smart Pricing Engine
-- **Customer Segmentation**: Academic, Biotech Startup, Pharma Enterprise, Research Institute
-- **Price Optimization**: Segment-specific pricing with category adjustments
-- **Elasticity Analysis**: Demand modeling across price ranges
-- **Margin Analysis**: Current vs optimized margin comparison
+## Core Features
 
-### 2. Shipping Cost Estimator
-- **Weight Inference**: ML-powered prediction for missing product weights
-- **Multi-Carrier Support**: FedEx, UPS, DHL with service level options
-- **International Shipping**: Tariff and customs fee calculation
-- **Sourcing Optimization**: Multi-location fulfillment optimization
+### Smart Pricing Engine
+- Customer segmentation (Academic, Enterprise, Government, Startup, Pharmaceutical)
+- Price optimization based on customer type and order volume
+- Margin analysis and revenue projections
+- PDF export of pricing recommendations
 
-### 3. Dynamic Invoice Generator
-- **Adaptive Fields**: Dynamic tariffs, service fees, handling charges
-- **Customer Templates**: Segment-specific invoice structures
-- **Promotion Engine**: Automatic discount application and impact analysis
-- **Compliance**: Tax calculation by jurisdiction and product category
+### Shipping Cost Estimator
+- Weight inference for products with missing weight data
+- Multi-carrier support (FedEx, UPS, DHL)
+- International shipping with customs and tariff calculations
+- Sourcing optimization across multiple locations
 
-## 🎯 Evaluation Criteria Alignment
+### Dynamic Invoice Generator
+- Adaptive invoice fields based on customer type and region
+- Automatic tax and tariff calculations
+- Promotion and discount management
+- Professional PDF invoice generation
 
-| Criterion | Implementation | Score Target |
-|-----------|----------------|--------------|
-| **Coverage** | Life sciences products, suppliers, customers | ✅ Full |
-| **Pricing Accuracy** | Revenue/margin improvement vs baseline | ✅ +15-25% |
-| **Invoice Adaptability** | Dynamic fees and tariffs by region/segment | ✅ Full |
-| **Shipping Accuracy** | ±10% known weights, ±20% inferred | ✅ Target Met |
-| **Usability** | Clear, actionable outputs for teams | ✅ Intuitive UI |
+## Technical Architecture
 
-## 📈 Sample Data & Models
+### Backend (FastAPI)
+- RESTful APIs for pricing, shipping, and invoice operations
+- Machine learning models for weight inference and customer segmentation
+- Business logic for pricing optimization and cost calculations
 
-### Product Categories
-- **Reagents**: Chemicals, buffers, assay kits
-- **Lab Equipment**: Pipettes, centrifuges, microscopes  
-- **Consumables**: Tips, tubes, plates
-- **Instruments**: Spectrophotometers, PCR machines
-- **Chemicals**: Solvents, standards, reference materials
+### Frontend (Next.js)
+- React-based dashboard with TypeScript
+- Interactive forms for pricing and shipping estimation
+- PDF export functionality for reports and invoices
+- Responsive design with TailwindCSS
 
-### Customer Segments
-- **Academic**: Universities, research institutions (discounts)
-- **Biotech Startup**: Small companies (competitive pricing)
-- **Pharma Enterprise**: Large corporations (volume pricing)
-- **Research Institute**: Government labs (grant-friendly terms)
+### Machine Learning Models
+- Random Forest models for price prediction and weight inference
+- K-means clustering for customer segmentation
+- Rule-based pricing algorithms with ML enhancements
 
-## 🛠️ Technical Stack
+## Sample Data
 
-- **Backend**: FastAPI, Python, SQLAlchemy, PostgreSQL
+The system includes generated sample data for demonstration:
+- 1000+ life sciences products across multiple categories
+- 200+ customers representing different market segments
+- 5000+ historical transactions for model training
+- Realistic pricing patterns and shipping weights
+
+## Technology Stack
+
+- **Backend**: Python, FastAPI, scikit-learn, pandas, NumPy
 - **Frontend**: Next.js, React, TypeScript, TailwindCSS
-- **ML/AI**: scikit-learn, Prophet, pandas, NumPy
-- **APIs**: RESTful services with OpenAPI documentation
-- **Deployment**: Docker-ready with environment configuration
+- **PDF Generation**: jsPDF
+- **Development**: Docker-ready with environment configuration
 
-## 📝 Development Roadmap
+## Documentation
 
-### Phase 1: Core MVP ✅
-- [x] Backend API structure
-- [x] Pricing engine with customer segmentation
-- [x] Shipping estimator with weight inference
-- [x] Invoice generator with dynamic fields
-- [x] Frontend dashboard and navigation
+- **Quick Start Guide**: See `QUICK_START.md` for detailed setup instructions
+- **FAQ**: See `SMART_PRICING_FAQ.md` for technical questions and explanations
+- **API Documentation**: Available at http://localhost:8000/docs when backend is running
 
-### Phase 2: Enhanced Features
-- [ ] ML model training on sample data
-- [ ] Real-time pricing optimization
-- [ ] Advanced shipping route optimization
-- [ ] Promotion impact simulation
+## Project Structure
 
-### Phase 3: Integration & Polish
-- [ ] Database integration
-- [ ] API performance optimization
-- [ ] UI/UX enhancements
-- [ ] Comprehensive testing
-
-## 📊 Expected Impact
-
-- **Revenue Increase**: 15-25% through optimized pricing
-- **Margin Improvement**: 3-8% through intelligent fee structures
-- **Operational Efficiency**: 40% reduction in manual pricing decisions
-- **Shipping Accuracy**: 95%+ cost prediction accuracy
-- **Customer Satisfaction**: Segment-appropriate pricing and terms
-
-## 🏆 Winning Strategy
-
-1. **Technical Excellence**: Robust AI models with real-world applicability
-2. **Business Impact**: Clear ROI through margin and revenue optimization
-3. **User Experience**: Intuitive interface for pricing/operations teams
-4. **Scalability**: Modular architecture supporting growth
-5. **Innovation**: Novel approach to e-commerce intelligence in life sciences
-
----
-
-*Built for the Smart Pricing AI Hackathon - VC Big Bets (Pricing) Track*
+```
+smartPricing/
+├── backend/              # FastAPI application
+├── frontend/             # Next.js application
+├── data/                 # Sample CSV data files
+├── ml_models/            # Trained ML models
+├── scripts/              # Data generation and model training
+└── start-smart-pricing.* # One-click startup scripts
+```
