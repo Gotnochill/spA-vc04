@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
-from app.api import pricing, shipping, invoices, dashboard
+from app.api import pricing, shipping, invoices, dashboard, products
 
 app = FastAPI(
     title="Smart Pricing AI",
@@ -23,6 +23,7 @@ app.include_router(pricing.router, prefix="/api/pricing", tags=["pricing"])
 app.include_router(shipping.router, prefix="/api/shipping", tags=["shipping"])
 app.include_router(invoices.router, prefix="/api/invoices", tags=["invoices"])
 app.include_router(dashboard.router, prefix="/api/dashboard", tags=["dashboard"])
+app.include_router(products.router, prefix="/api/products", tags=["products"])
 
 @app.get("/")
 async def root():

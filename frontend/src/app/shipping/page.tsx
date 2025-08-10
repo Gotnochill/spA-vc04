@@ -1,11 +1,27 @@
 'use client'
 
-import { useState } from 'react'
-import { TruckIcon, GlobeAltIcon, ScaleIcon, MapPinIcon, ClockIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline'
-import CustomDropdown from '../../components/CustomDropdown'
+import { useState, useEffect } from 'react'
+import { TruckIcon, GlobeAltIcon, ScaleIcon, MapPinIcon, ClockIcon, CurrencyDollarIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
+
+interface Product {
+  sku: string
+  name: string
+  category: string
+  supplier: string
+  weight_kg: number
+  base_price: number
+  hs_code: string
+}
+
+interface CustomerSegment {
+  value: string
+  label: string
+  description: string
+}
 
 interface ShippingRequest {
   productId: string
+  customerSegment: string
   category: string
   dimensions: {
     length: number
@@ -34,6 +50,7 @@ interface ShippingResponse {
 export default function ShippingPage() {
   const [request, setRequest] = useState<ShippingRequest>({
     productId: '',
+    customerSegment: 'academic',
     category: 'reagents',
     dimensions: { length: 0, width: 0, height: 0 },
     weight: undefined,
@@ -44,6 +61,15 @@ export default function ShippingPage() {
   
   const [response, setResponse] = useState<ShippingResponse | null>(null)
   const [loading, setLoading] = useState(false)
+  const [products, setProducts] = useState<Product[]>([])
+  const [loadingProducts, setLoadingProducts] = useState(false)
+
+  const customerSegmentOptions: CustomerSegment[] = [
+    { value: 'academic', label: 'Academic Institution', description: 'Universities and educational institutions' },
+    { value: 'biotech_startup', label: 'Biotech Startup', description: 'Small to medium biotech companies' },
+    { value: 'pharma_enterprise', label: 'Pharmaceutical Enterprise', description: 'Large pharmaceutical corporations' },
+    { value: 'research_institute', label: 'Research Institute', description: 'Government and private research facilities' }
+  ]
 
   const categoryOptions = [
     { value: 'reagents', label: 'Reagents', description: 'Chemical reagents and solutions' },
@@ -59,6 +85,182 @@ export default function ShippingPage() {
     { value: 'overnight', label: 'Overnight', description: 'Next business day delivery' },
     { value: 'ground', label: 'Ground', description: 'Economical ground shipping, 5-7 days' }
   ]
+
+  // Fetch products on component mount
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoadingProducts(true)
+      try {
+        const response = await fetch('http://localhost:8000/api/products/')
+        if (response.ok) {
+          const data = await response.json()
+          setProducts(data)
+        }
+      } catch (error) {
+        console.error('Error fetching products:', error)
+        // Fallback sample products
+        setProducts([
+          {
+            sku: 'CHE-001',
+            name: 'Analytical Grade Methanol',
+            category: 'chemicals',
+            supplier: 'Sigma-Aldrich',
+            weight_kg: 2.5,
+            base_price: 185.00,
+            hs_code: '2905'
+          },
+          {
+            sku: 'LAB-002',
+            name: 'Digital pH Meter',
+            category: 'lab_equipment',
+            supplier: 'Agilent',
+            weight_kg: 1.2,
+            base_price: 450.00,
+            hs_code: '9027'
+          }
+        ])
+      }
+      setLoadingProducts(false)
+    }
+    
+    fetchProducts()
+  }, [])
+
+  // Custom dropdown component
+  const CustomDropdown = ({ 
+    options, 
+    value, 
+    onChange, 
+    label, 
+    placeholder = "Select option" 
+  }: {
+    options: any[]
+    value: string
+    onChange: (value: string) => void
+    label: string
+    placeholder?: string
+  }) => {
+    const [isOpen, setIsOpen] = useState(false)
+    const selectedOption = options.find(opt => opt.value === value)
+
+    return (
+      <div className="relative">
+        <label className="block text-sm font-medium text-slate-700 mb-2">
+          {label}
+        </label>
+        <div className="relative">
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="glass-card w-full px-4 py-3 text-left bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <span className="block text-sm font-medium text-gray-900">
+                  {selectedOption ? selectedOption.label : placeholder}
+                </span>
+                {selectedOption && selectedOption.description && (
+                  <span className="block text-xs text-gray-500">{selectedOption.description}</span>
+                )}
+              </div>
+              <ChevronDownIcon className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+            </div>
+          </button>
+          
+          {isOpen && (
+            <div className="absolute z-10 w-full mt-1 bg-white/90 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl max-h-60 overflow-auto">
+              {options.map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => {
+                    onChange(option.value)
+                    setIsOpen(false)
+                  }}
+                  className="w-full px-4 py-3 text-left hover:bg-blue-50/50 transition-colors duration-200 first:rounded-t-2xl last:rounded-b-2xl"
+                >
+                  <div className="block text-sm font-medium text-gray-900">{option.label}</div>
+                  {option.description && (
+                    <div className="block text-xs text-gray-500">{option.description}</div>
+                  )}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  // Product dropdown component
+  const ProductDropdown = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    const selectedProduct = products.find(p => p.sku === request.productId)
+
+    return (
+      <div className="relative">
+        <label className="block text-sm font-medium text-slate-700 mb-2">
+          Product Selection
+        </label>
+        <div className="relative">
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="glass-card w-full px-4 py-3 text-left bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+            disabled={loadingProducts}
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                {selectedProduct ? (
+                  <>
+                    <span className="block text-sm font-medium text-gray-900">
+                      {selectedProduct.sku} - {selectedProduct.name}
+                    </span>
+                    <span className="block text-xs text-gray-500">
+                      {selectedProduct.category.replace('_', ' ')} • {selectedProduct.supplier}
+                    </span>
+                  </>
+                ) : (
+                  <span className="block text-sm text-gray-500">
+                    {loadingProducts ? 'Loading products...' : 'Select a product'}
+                  </span>
+                )}
+              </div>
+              <ChevronDownIcon className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+            </div>
+          </button>
+          
+          {isOpen && !loadingProducts && (
+            <div className="absolute z-10 w-full mt-1 bg-white/90 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl max-h-60 overflow-auto">
+              {products.map((product) => (
+                <button
+                  key={product.sku}
+                  type="button"
+                  onClick={() => {
+                    setRequest(prev => ({ 
+                      ...prev, 
+                      productId: product.sku,
+                      category: product.category,
+                      weight: product.weight_kg * 2.20462 // Convert kg to lbs
+                    }))
+                    setIsOpen(false)
+                  }}
+                  className="w-full px-4 py-3 text-left hover:bg-blue-50/50 transition-colors duration-200 first:rounded-t-2xl last:rounded-b-2xl"
+                >
+                  <div className="block text-sm font-medium text-gray-900">
+                    {product.sku} - {product.name}
+                  </div>
+                  <div className="block text-xs text-gray-500">
+                    {product.category.replace('_', ' ')} • {product.supplier} • ${product.base_price}
+                  </div>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
 
   const handleEstimate = async () => {
     setLoading(true)
@@ -112,46 +314,43 @@ export default function ShippingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen p-6">
+      <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <div className="flex items-center space-x-3 mb-6">
-            <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-lg">
               <TruckIcon className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-slate-900">Shipping Cost Estimator</h1>
-              <p className="text-slate-600">Intelligent weight inference and multi-carrier optimization</p>
+              <h1 className="text-3xl font-bold text-gray-800">Shipping Cost Estimator</h1>
+              <p className="text-gray-600">Intelligent weight inference and multi-carrier optimization</p>
             </div>
           </div>
           
-          <div className="matte-card p-4">
+          <div className="glass-card p-4 floating-element">
             <div className="flex items-center space-x-3">
-              <div className="status-dot status-success"></div>
-              <span className="text-sm font-medium text-slate-700">AI Weight Inference</span>
-              <span className="text-xs text-slate-500">• Smart carrier optimization active</span>
+              <div className="status-indicator success"></div>
+              <span className="text-sm font-medium text-gray-700">AI Weight Inference</span>
+              <span className="text-xs text-gray-500">• Smart carrier optimization active</span>
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Input Form */}
-          <div className="matte-card p-8">
-            <h2 className="text-xl font-bold text-slate-900 mb-6">Shipping Details</h2>
+          <div className="glass-card p-8">
+            <h2 className="text-xl font-bold text-gray-800 mb-6">Shipping Details</h2>
             
             <div className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Product ID
-                </label>
-                <input
-                  type="text"
-                  value={request.productId}
-                  onChange={(e) => setRequest(prev => ({ ...prev, productId: e.target.value }))}
-                  className="matte-input"
-                  placeholder="e.g., PRD-001, LAB-KIT-500"
-                />
-              </div>
+              <ProductDropdown />
+
+              <CustomDropdown
+                options={customerSegmentOptions}
+                value={request.customerSegment}
+                onChange={(value) => setRequest(prev => ({ ...prev, customerSegment: value }))}
+                label="Customer Segment"
+                placeholder="Select customer type"
+              />
 
               <CustomDropdown
                 options={categoryOptions}
@@ -162,7 +361,7 @@ export default function ShippingPage() {
               />
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Dimensions (inches)
                 </label>
                 <div className="grid grid-cols-3 gap-3">
@@ -173,7 +372,7 @@ export default function ShippingPage() {
                       ...prev, 
                       dimensions: { ...prev.dimensions, length: parseFloat(e.target.value) || 0 }
                     }))}
-                    className="matte-input"
+                    className="glass-card px-4 py-3 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
                     placeholder="Length"
                     min="0"
                     step="0.1"
@@ -185,7 +384,7 @@ export default function ShippingPage() {
                       ...prev, 
                       dimensions: { ...prev.dimensions, width: parseFloat(e.target.value) || 0 }
                     }))}
-                    className="matte-input"
+                    className="glass-card px-4 py-3 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
                     placeholder="Width"
                     min="0"
                     step="0.1"
@@ -197,7 +396,7 @@ export default function ShippingPage() {
                       ...prev, 
                       dimensions: { ...prev.dimensions, height: parseFloat(e.target.value) || 0 }
                     }))}
-                    className="matte-input"
+                    className="glass-card px-4 py-3 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
                     placeholder="Height"
                     min="0"
                     step="0.1"
@@ -206,7 +405,7 @@ export default function ShippingPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Weight (lbs) - Optional
                 </label>
                 <input
@@ -216,36 +415,36 @@ export default function ShippingPage() {
                     ...prev, 
                     weight: e.target.value ? parseFloat(e.target.value) : undefined 
                   }))}
-                  className="matte-input"
+                  className="glass-card w-full px-4 py-3 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
                   placeholder="Leave empty for AI weight inference"
                   min="0"
                   step="0.1"
                 />
-                <p className="text-xs text-slate-500 mt-1">If not provided, weight will be inferred from dimensions and category</p>
+                <p className="text-xs text-gray-500 mt-1">If not provided, weight will be inferred from dimensions and category</p>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Origin
                 </label>
                 <input
                   type="text"
                   value={request.origin}
                   onChange={(e) => setRequest(prev => ({ ...prev, origin: e.target.value }))}
-                  className="matte-input"
+                  className="glass-card w-full px-4 py-3 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
                   placeholder="e.g., New York, NY"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Destination
                 </label>
                 <input
                   type="text"
                   value={request.destination}
                   onChange={(e) => setRequest(prev => ({ ...prev, destination: e.target.value }))}
-                  className="matte-input"
+                  className="glass-card w-full px-4 py-3 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
                   placeholder="e.g., Los Angeles, CA"
                 />
               </div>
@@ -261,13 +460,11 @@ export default function ShippingPage() {
               <button
                 onClick={handleEstimate}
                 disabled={loading || !request.productId || !request.destination}
-                className={`matte-btn matte-btn-primary w-full py-4 text-base font-semibold ${
-                  loading ? 'opacity-50 cursor-not-allowed' : ''
-                }`}
+                className="modern-btn bg-gradient-to-r from-green-500 to-emerald-600 text-white w-full py-4 text-base font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {loading ? (
                   <div className="flex items-center justify-center">
-                    <div className="spinner mr-2"></div>
+                    <div className="loading-spinner mr-3"></div>
                     Calculating...
                   </div>
                 ) : (
@@ -278,64 +475,64 @@ export default function ShippingPage() {
           </div>
 
           {/* Results */}
-          <div className="matte-card p-8">
-            <h2 className="text-xl font-bold text-slate-900 mb-6">Shipping Estimate</h2>
+          <div className="glass-card p-8">
+            <h2 className="text-xl font-bold text-gray-800 mb-6">Shipping Estimate</h2>
             
             {response ? (
               <div className="space-y-6">
                 {/* Primary Results */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="metric-block">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-                        <CurrencyDollarIcon className="w-4 h-4 text-green-600" />
+                  <div className="metric-card">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg">
+                        <CurrencyDollarIcon className="w-6 h-6 text-white" />
                       </div>
-                      <span className="text-sm font-medium text-slate-600">Estimated Cost</span>
+                      <span className="text-sm font-medium text-gray-600">Estimated Cost</span>
                     </div>
-                    <p className="text-2xl font-bold text-slate-900">${response.estimatedCost.toFixed(2)}</p>
+                    <p className="text-3xl font-bold text-gray-800">${response.estimatedCost.toFixed(2)}</p>
                   </div>
 
-                  <div className="metric-block">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <ScaleIcon className="w-4 h-4 text-blue-600" />
+                  <div className="metric-card">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center shadow-lg">
+                        <ScaleIcon className="w-6 h-6 text-white" />
                       </div>
-                      <span className="text-sm font-medium text-slate-600">Inferred Weight</span>
+                      <span className="text-sm font-medium text-gray-600">Inferred Weight</span>
                     </div>
-                    <p className="text-2xl font-bold text-slate-900">{response.inferredWeight.toFixed(1)} lbs</p>
+                    <p className="text-3xl font-bold text-gray-800">{response.inferredWeight.toFixed(1)} lbs</p>
                   </div>
 
-                  <div className="metric-block">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
-                        <TruckIcon className="w-4 h-4 text-purple-600" />
+                  <div className="metric-card">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg">
+                        <TruckIcon className="w-6 h-6 text-white" />
                       </div>
-                      <span className="text-sm font-medium text-slate-600">Recommended Carrier</span>
+                      <span className="text-sm font-medium text-gray-600">Recommended Carrier</span>
                     </div>
-                    <p className="text-lg font-bold text-slate-900">{response.recommendedCarrier}</p>
+                    <p className="text-lg font-bold text-gray-800">{response.recommendedCarrier}</p>
                   </div>
 
-                  <div className="metric-block">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
-                        <ClockIcon className="w-4 h-4 text-orange-600" />
+                  <div className="metric-card">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+                        <ClockIcon className="w-6 h-6 text-white" />
                       </div>
-                      <span className="text-sm font-medium text-slate-600">Delivery Time</span>
+                      <span className="text-sm font-medium text-gray-600">Delivery Time</span>
                     </div>
-                    <p className="text-lg font-bold text-slate-900">{response.deliveryTime}</p>
+                    <p className="text-lg font-bold text-gray-800">{response.deliveryTime}</p>
                   </div>
                 </div>
 
                 {/* Confidence */}
-                <div className="matte-card p-6 bg-green-50 border-green-200">
+                <div className="glass-card p-6 bg-gradient-to-r from-green-50/80 to-emerald-50/80 border border-green-200/50">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="font-semibold text-slate-900">Confidence Score</h3>
-                      <p className="text-sm text-slate-600">AI prediction accuracy</p>
+                      <h3 className="font-semibold text-gray-800">Confidence Score</h3>
+                      <p className="text-sm text-gray-600">AI prediction accuracy</p>
                     </div>
                     <div className="text-right">
                       <p className="text-2xl font-bold text-green-600">{response.confidence.toFixed(1)}%</p>
-                      <p className="text-xs text-slate-500">High accuracy</p>
+                      <p className="text-xs text-gray-500">High accuracy</p>
                     </div>
                   </div>
                 </div>

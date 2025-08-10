@@ -1,8 +1,18 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ChartBarIcon, UserGroupIcon, CurrencyDollarIcon, ArrowTrendingUpIcon } from '@heroicons/react/24/outline'
 import CustomDropdown from '../../components/CustomDropdown'
+
+interface Product {
+  sku: string
+  name: string
+  category: string
+  supplier: string
+  weight_kg: number
+  base_price: number
+  hs_code: string
+}
 
 interface PricingRequest {
   productId: string
@@ -29,34 +39,102 @@ export default function PricingPage() {
   
   const [response, setResponse] = useState<PricingResponse | null>(null)
   const [loading, setLoading] = useState(false)
+  const [products, setProducts] = useState<Product[]>([])
+  const [loadingProducts, setLoadingProducts] = useState(false)
+
+  // Fetch products on component mount
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoadingProducts(true)
+      try {
+        const response = await fetch('http://localhost:8000/api/products/')
+        if (response.ok) {
+          const data = await response.json()
+          setProducts(data)
+        }
+      } catch (error) {
+        console.error('Error fetching products:', error)
+        // Fallback sample products
+        setProducts([
+          {
+            sku: 'CHE-001',
+            name: 'Analytical Grade Methanol',
+            category: 'chemicals',
+            supplier: 'Sigma-Aldrich',
+            weight_kg: 2.5,
+            base_price: 185.00,
+            hs_code: '2905'
+          },
+          {
+            sku: 'LAB-002',
+            name: 'Digital pH Meter',
+            category: 'lab_equipment',
+            supplier: 'Agilent',
+            weight_kg: 1.2,
+            base_price: 450.00,
+            hs_code: '9027'
+          },
+          {
+            sku: 'BIO-003',
+            name: 'PCR Master Mix',
+            category: 'reagents',
+            supplier: 'Thermo Fisher',
+            weight_kg: 0.1,
+            base_price: 95.00,
+            hs_code: '3822'
+          }
+        ])
+      }
+      setLoadingProducts(false)
+    }
+    
+    fetchProducts()
+  }, [])
 
   const customerSegmentOptions = [
     { 
       value: 'academic', 
-      label: 'Academic', 
+      label: 'Academic Institution', 
       description: 'Universities, research institutions, educational facilities' 
     },
     { 
       value: 'enterprise', 
-      label: 'Enterprise', 
+      label: 'Enterprise Corporation', 
       description: 'Large corporations, established companies' 
     },
     { 
       value: 'government', 
-      label: 'Government', 
+      label: 'Government Agency', 
       description: 'Federal, state, and local government agencies' 
     },
     { 
       value: 'startup', 
-      label: 'Startup', 
+      label: 'Startup Company', 
       description: 'Early-stage companies, small businesses' 
     },
     { 
       value: 'pharmaceutical', 
-      label: 'Pharmaceutical', 
+      label: 'Pharmaceutical Company', 
       description: 'Drug development companies, biotech firms' 
     }
   ]
+
+  // Create product options for dropdown
+  const productOptions = products.map(product => ({
+    value: product.sku,
+    label: `${product.sku} - ${product.name}`,
+    description: `${product.category.replace('_', ' ')} • ${product.supplier} • $${product.base_price}`
+  }))
+
+  // Handle product selection and auto-fill price
+  const handleProductChange = (productSku: string) => {
+    const selectedProduct = products.find(p => p.sku === productSku)
+    setRequest(prev => ({
+      ...prev,
+      productId: productSku,
+      currentPrice: selectedProduct ? selectedProduct.base_price : 0
+    }))
+  }
 
   const handleOptimize = async () => {
     setLoading(true)
@@ -124,18 +202,13 @@ export default function PricingPage() {
             <h2 className="text-xl font-bold text-slate-900 mb-6">Pricing Optimization Request</h2>
             
             <div className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Product ID
-                </label>
-                <input
-                  type="text"
-                  value={request.productId}
-                  onChange={(e) => setRequest(prev => ({ ...prev, productId: e.target.value }))}
-                  className="matte-input"
-                  placeholder="e.g., PRD-001, LAB-KIT-500"
-                />
-              </div>
+              <CustomDropdown
+                options={productOptions}
+                value={request.productId}
+                onChange={handleProductChange}
+                label="Product Selection"
+                placeholder={loadingProducts ? "Loading products..." : "Select a product"}
+              />
 
               <CustomDropdown
                 options={customerSegmentOptions}
@@ -170,8 +243,11 @@ export default function PricingPage() {
                   className="matte-input"
                   step="0.01"
                   min="0"
-                  placeholder="0.00"
+                  placeholder="Auto-filled from product selection"
                 />
+                <p className="text-xs text-slate-500 mt-1">
+                  Price is automatically filled when you select a product
+                </p>
               </div>
 
               <button

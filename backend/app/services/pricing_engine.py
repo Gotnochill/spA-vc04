@@ -114,3 +114,69 @@ class PricingEngine:
                 "Volume-based pricing tiers"
             ]
         }
+    
+    def optimize_price(self, product_id: str, customer_segment: str, quantity: int, current_price: float) -> Dict[str, Any]:
+        """
+        Optimize pricing for a specific product and customer segment.
+        """
+        # Customer segment pricing multipliers
+        segment_multipliers = {
+            "academic": 0.85,  # Academic discount
+            "enterprise": 1.15,  # Enterprise premium
+            "government": 0.90,  # Government discount
+            "startup": 0.95,   # Startup discount
+            "pharmaceutical": 1.20  # Pharma premium
+        }
+        
+        # Volume discounts based on quantity
+        volume_multipliers = {
+            1: 1.0,      # Single item
+            2: 0.98,     # 2% discount for 2+
+            5: 0.95,     # 5% discount for 5+
+            10: 0.92,    # 8% discount for 10+
+            25: 0.88,    # 12% discount for 25+
+        }
+        
+        # Get the appropriate multipliers
+        segment_mult = segment_multipliers.get(customer_segment, 1.0)
+        
+        # Find the right volume multiplier
+        volume_mult = 1.0
+        for qty_threshold in sorted(volume_multipliers.keys(), reverse=True):
+            if quantity >= qty_threshold:
+                volume_mult = volume_multipliers[qty_threshold]
+                break
+        
+        # Calculate optimized price
+        base_optimization = current_price * segment_mult * volume_mult
+        
+        # Add AI-driven adjustments (simulated with some randomness for demo)
+        market_factor = np.random.uniform(0.95, 1.05)  # Market conditions
+        competition_factor = np.random.uniform(0.98, 1.02)  # Competitive pricing
+        
+        optimized_price = base_optimization * market_factor * competition_factor
+        
+        # Calculate metrics
+        price_change_pct = ((optimized_price - current_price) / current_price) * 100
+        expected_margin = 25.0 + (price_change_pct * 0.5)  # Margin improves with price
+        price_elasticity = abs(price_change_pct) / 10.0  # Simple elasticity model
+        confidence = 85.0 + np.random.uniform(0, 15)  # 85-100% confidence
+        
+        # Generate recommendation text
+        if optimized_price > current_price:
+            action = "increase"
+            direction = "higher"
+        else:
+            action = "decrease"
+            direction = "lower"
+        
+        recommendation = f"Recommend {action} price by {abs(price_change_pct):.1f}% for {customer_segment} segment. " \
+                        f"Market analysis suggests {direction} pricing will optimize revenue while maintaining competitiveness."
+        
+        return {
+            "optimized_price": round(optimized_price, 2),
+            "expected_margin": round(expected_margin, 1),
+            "price_elasticity": round(price_elasticity, 2),
+            "recommendation": recommendation,
+            "confidence": round(confidence, 1)
+        }

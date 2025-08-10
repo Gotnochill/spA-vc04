@@ -326,3 +326,61 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
+
+/* Matte Design Components */
+.matte-card {
+  @apply bg-white/90 border border-slate-200/50 rounded-xl shadow-sm backdrop-blur-sm hover:shadow-md transition-all duration-300;
+}
+
+.matte-input {
+  @apply w-full px-4 py-3 bg-white/70 border border-slate-200/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500/50 transition-all duration-300 placeholder-slate-400;
+}
+
+.matte-btn {
+  @apply px-6 py-3 rounded-xl font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.matte-btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 shadow-lg hover:shadow-xl;
+}
+
+.matte-btn-secondary {
+  @apply bg-slate-100 text-slate-700 hover:bg-slate-200 focus:ring-slate-500 border border-slate-200;
+}
+
+.metric-block {
+  @apply matte-card p-6 hover:scale-105 transform transition-all duration-300;
+}
+
+.status-dot {
+  @apply w-2 h-2 rounded-full;
+}
+
+.status-success {
+  @apply bg-green-500;
+}
+
+.spinner {
+  @apply w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin;
+}
+
+/* Custom Dropdown Styles */
+.custom-dropdown {
+  @apply relative;
+}
+
+.dropdown-trigger {
+  @apply w-full px-4 py-3 bg-white/70 border border-slate-200/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500/50 transition-all duration-300 flex items-center justify-between text-left;
+}
+
+.dropdown-menu {
+  @apply absolute z-50 w-full mt-1 bg-white border border-slate-200/50 rounded-xl shadow-lg max-h-60 overflow-y-auto;
+}
+
+.dropdown-item {
+  @apply w-full px-4 py-3 text-left hover:bg-blue-50 transition-colors duration-200 flex items-center justify-between first:rounded-t-xl last:rounded-b-xl;
+}
+
+.dropdown-item.selected {
+  @apply bg-blue-50 text-blue-700;
+}
