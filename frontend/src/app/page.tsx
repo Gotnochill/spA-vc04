@@ -48,9 +48,44 @@ export default function Dashboard() {
 
   const [activities, setActivities] = useState<RecentActivity[]>([])
   const [loading, setLoading] = useState(true)
+  const [refreshing, setRefreshing] = useState(false)
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
 
-  useEffect(() => {
-    setTimeout(() => {
+  const fetchDashboardData = async (isRefresh = false) => {
+    try {
+      if (isRefresh) {
+        setRefreshing(true)
+      } else {
+        setLoading(true)
+      }
+      
+      // Fetch dashboard stats from backend
+      const statsResponse = await fetch('http://localhost:8000/api/dashboard/stats')
+      const statsData = await statsResponse.json()
+      
+      // Fetch recent activities from backend  
+      const activitiesResponse = await fetch('http://localhost:8000/api/dashboard/activities')
+      const activitiesData = await activitiesResponse.json()
+      
+      setStats({
+        totalRevenue: statsData.totalRevenue,
+        avgMargin: statsData.avgMargin,
+        ordersProcessed: statsData.ordersProcessed,
+        shippingAccuracy: statsData.shippingAccuracy,
+        recentOrders: statsData.recentOrders,
+        avgOrderValue: statsData.avgOrderValue,
+        topPerformingCategory: statsData.topPerformingCategory,
+        priceOptimizations: statsData.priceOptimizations
+      })
+      
+      setActivities(activitiesData)
+      setLastUpdated(new Date())
+      setLoading(false)
+      setRefreshing(false)
+      
+    } catch (error) {
+      console.error('Error fetching dashboard data:', error)
+      // Fallback to demo data if API fails
       setStats({
         totalRevenue: 2847392,
         avgMargin: 28.5,
@@ -61,7 +96,7 @@ export default function Dashboard() {
         topPerformingCategory: 'Laboratory Equipment',
         priceOptimizations: 156
       })
-
+      
       setActivities([
         {
           id: '1',
@@ -94,8 +129,19 @@ export default function Dashboard() {
           status: 'success'
         }
       ])
+      setLastUpdated(new Date())
       setLoading(false)
-    }, 1200)
+      setRefreshing(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchDashboardData()
+    
+    // Refresh data every 30 seconds
+    const interval = setInterval(() => fetchDashboardData(), 30000)
+    
+    return () => clearInterval(interval)
   }, [])
 
   return (
@@ -116,10 +162,31 @@ export default function Dashboard() {
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Advanced pricing optimization and analytics platform designed specifically for life sciences e-commerce
             </p>
-            <div className="flex items-center justify-center space-x-3">
-              <div className="status-indicator success"></div>
-              <span className="text-sm font-semibold text-gray-700">AI Systems Online & Optimizing</span>
+            <div className="flex items-center justify-center space-x-6 mb-6">
+              <div className="flex items-center space-x-3">
+                <div className="status-indicator success"></div>
+                <span className="text-sm font-semibold text-gray-700">AI Systems Online & Optimizing</span>
+              </div>
+              {lastUpdated && (
+                <div className="flex items-center space-x-2 text-sm text-gray-500">
+                  <ClockIcon className="w-4 h-4" />
+                  <span>Last updated: {lastUpdated.toLocaleTimeString()}</span>
+                </div>
+              )}
             </div>
+            <button
+              onClick={() => fetchDashboardData(true)}
+              disabled={refreshing}
+              className="modern-btn bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+            >
+              <div className={`w-4 h-4 ${refreshing ? 'animate-spin' : ''}`}>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-white">
+                  <path d="M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M3 12L6 15L3 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span>{refreshing ? 'Refreshing...' : 'Refresh Data'}</span>
+            </button>
           </div>
         </div>
 
