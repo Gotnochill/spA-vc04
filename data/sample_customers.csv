@@ -1,0 +1,201 @@
+customer_id,name,segment,country,tax_exempt
+CUST-0000,Research Institute 0,research_institute,FR,False
+CUST-0001,Pharma Enterprise 1,pharma_enterprise,FR,False
+CUST-0002,Academic 2,academic,GB,False
+CUST-0003,Biotech Startup 3,biotech_startup,DE,False
+CUST-0004,Pharma Enterprise 4,pharma_enterprise,GB,False
+CUST-0005,Biotech Startup 5,biotech_startup,GB,False
+CUST-0006,Research Institute 6,research_institute,AU,False
+CUST-0007,Research Institute 7,research_institute,US,False
+CUST-0008,Research Institute 8,research_institute,DE,False
+CUST-0009,Research Institute 9,research_institute,US,False
+CUST-0010,Research Institute 10,research_institute,GB,False
+CUST-0011,Research Institute 11,research_institute,AU,False
+CUST-0012,Research Institute 12,research_institute,JP,False
+CUST-0013,Pharma Enterprise 13,pharma_enterprise,JP,False
+CUST-0014,Academic 14,academic,AU,True
+CUST-0015,Research Institute 15,research_institute,CA,False
+CUST-0016,Biotech Startup 16,biotech_startup,JP,False
+CUST-0017,Research Institute 17,research_institute,GB,False
+CUST-0018,Academic 18,academic,US,False
+CUST-0019,Research Institute 19,research_institute,CA,False
+CUST-0020,Academic 20,academic,JP,True
+CUST-0021,Pharma Enterprise 21,pharma_enterprise,GB,False
+CUST-0022,Research Institute 22,research_institute,CA,False
+CUST-0023,Research Institute 23,research_institute,GB,False
+CUST-0024,Research Institute 24,research_institute,US,False
+CUST-0025,Research Institute 25,research_institute,US,False
+CUST-0026,Biotech Startup 26,biotech_startup,FR,False
+CUST-0027,Pharma Enterprise 27,pharma_enterprise,AU,False
+CUST-0028,Research Institute 28,research_institute,CA,False
+CUST-0029,Biotech Startup 29,biotech_startup,AU,False
+CUST-0030,Biotech Startup 30,biotech_startup,DE,False
+CUST-0031,Academic 31,academic,AU,False
+CUST-0032,Pharma Enterprise 32,pharma_enterprise,GB,False
+CUST-0033,Pharma Enterprise 33,pharma_enterprise,GB,False
+CUST-0034,Academic 34,academic,CA,False
+CUST-0035,Research Institute 35,research_institute,CA,False
+CUST-0036,Pharma Enterprise 36,pharma_enterprise,JP,False
+CUST-0037,Biotech Startup 37,biotech_startup,GB,False
+CUST-0038,Academic 38,academic,FR,True
+CUST-0039,Academic 39,academic,US,False
+CUST-0040,Research Institute 40,research_institute,CA,False
+CUST-0041,Biotech Startup 41,biotech_startup,US,False
+CUST-0042,Biotech Startup 42,biotech_startup,JP,False
+CUST-0043,Academic 43,academic,CA,False
+CUST-0044,Biotech Startup 44,biotech_startup,GB,False
+CUST-0045,Pharma Enterprise 45,pharma_enterprise,DE,False
+CUST-0046,Pharma Enterprise 46,pharma_enterprise,US,False
+CUST-0047,Research Institute 47,research_institute,US,False
+CUST-0048,Research Institute 48,research_institute,DE,False
+CUST-0049,Biotech Startup 49,biotech_startup,AU,False
+CUST-0050,Pharma Enterprise 50,pharma_enterprise,JP,False
+CUST-0051,Pharma Enterprise 51,pharma_enterprise,AU,False
+CUST-0052,Research Institute 52,research_institute,US,False
+CUST-0053,Academic 53,academic,CA,True
+CUST-0054,Pharma Enterprise 54,pharma_enterprise,CA,False
+CUST-0055,Pharma Enterprise 55,pharma_enterprise,GB,False
+CUST-0056,Pharma Enterprise 56,pharma_enterprise,US,False
+CUST-0057,Research Institute 57,research_institute,JP,False
+CUST-0058,Research Institute 58,research_institute,JP,False
+CUST-0059,Biotech Startup 59,biotech_startup,AU,False
+CUST-0060,Research Institute 60,research_institute,JP,False
+CUST-0061,Biotech Startup 61,biotech_startup,GB,False
+CUST-0062,Biotech Startup 62,biotech_startup,JP,False
+CUST-0063,Pharma Enterprise 63,pharma_enterprise,AU,False
+CUST-0064,Research Institute 64,research_institute,AU,False
+CUST-0065,Pharma Enterprise 65,pharma_enterprise,GB,False
+CUST-0066,Academic 66,academic,CA,False
+CUST-0067,Pharma Enterprise 67,pharma_enterprise,CA,False
+CUST-0068,Research Institute 68,research_institute,AU,False
+CUST-0069,Research Institute 69,research_institute,CA,False
+CUST-0070,Biotech Startup 70,biotech_startup,DE,False
+CUST-0071,Pharma Enterprise 71,pharma_enterprise,GB,False
+CUST-0072,Biotech Startup 72,biotech_startup,FR,False
+CUST-0073,Research Institute 73,research_institute,GB,False
+CUST-0074,Biotech Startup 74,biotech_startup,GB,False
+CUST-0075,Pharma Enterprise 75,pharma_enterprise,US,False
+CUST-0076,Biotech Startup 76,biotech_startup,FR,False
+CUST-0077,Biotech Startup 77,biotech_startup,GB,False
+CUST-0078,Research Institute 78,research_institute,DE,False
+CUST-0079,Pharma Enterprise 79,pharma_enterprise,FR,False
+CUST-0080,Pharma Enterprise 80,pharma_enterprise,FR,False
+CUST-0081,Pharma Enterprise 81,pharma_enterprise,DE,False
+CUST-0082,Pharma Enterprise 82,pharma_enterprise,CA,False
+CUST-0083,Research Institute 83,research_institute,CA,False
+CUST-0084,Biotech Startup 84,biotech_startup,CA,False
+CUST-0085,Research Institute 85,research_institute,CA,False
+CUST-0086,Biotech Startup 86,biotech_startup,GB,False
+CUST-0087,Research Institute 87,research_institute,AU,False
+CUST-0088,Biotech Startup 88,biotech_startup,AU,False
+CUST-0089,Pharma Enterprise 89,pharma_enterprise,JP,False
+CUST-0090,Pharma Enterprise 90,pharma_enterprise,JP,False
+CUST-0091,Biotech Startup 91,biotech_startup,US,False
+CUST-0092,Pharma Enterprise 92,pharma_enterprise,DE,False
+CUST-0093,Pharma Enterprise 93,pharma_enterprise,FR,False
+CUST-0094,Academic 94,academic,DE,True
+CUST-0095,Research Institute 95,research_institute,AU,False
+CUST-0096,Pharma Enterprise 96,pharma_enterprise,CA,False
+CUST-0097,Pharma Enterprise 97,pharma_enterprise,AU,False
+CUST-0098,Pharma Enterprise 98,pharma_enterprise,US,False
+CUST-0099,Academic 99,academic,CA,False
+CUST-0100,Pharma Enterprise 100,pharma_enterprise,DE,False
+CUST-0101,Research Institute 101,research_institute,CA,False
+CUST-0102,Academic 102,academic,CA,False
+CUST-0103,Research Institute 103,research_institute,CA,False
+CUST-0104,Academic 104,academic,DE,False
+CUST-0105,Research Institute 105,research_institute,AU,False
+CUST-0106,Biotech Startup 106,biotech_startup,US,False
+CUST-0107,Pharma Enterprise 107,pharma_enterprise,AU,False
+CUST-0108,Biotech Startup 108,biotech_startup,AU,False
+CUST-0109,Research Institute 109,research_institute,DE,False
+CUST-0110,Research Institute 110,research_institute,US,False
+CUST-0111,Biotech Startup 111,biotech_startup,DE,False
+CUST-0112,Pharma Enterprise 112,pharma_enterprise,AU,False
+CUST-0113,Pharma Enterprise 113,pharma_enterprise,GB,False
+CUST-0114,Research Institute 114,research_institute,FR,False
+CUST-0115,Academic 115,academic,US,True
+CUST-0116,Research Institute 116,research_institute,AU,False
+CUST-0117,Pharma Enterprise 117,pharma_enterprise,DE,False
+CUST-0118,Biotech Startup 118,biotech_startup,US,False
+CUST-0119,Academic 119,academic,JP,False
+CUST-0120,Research Institute 120,research_institute,AU,False
+CUST-0121,Research Institute 121,research_institute,DE,False
+CUST-0122,Biotech Startup 122,biotech_startup,CA,False
+CUST-0123,Pharma Enterprise 123,pharma_enterprise,DE,False
+CUST-0124,Academic 124,academic,GB,False
+CUST-0125,Pharma Enterprise 125,pharma_enterprise,CA,False
+CUST-0126,Pharma Enterprise 126,pharma_enterprise,CA,False
+CUST-0127,Pharma Enterprise 127,pharma_enterprise,DE,False
+CUST-0128,Biotech Startup 128,biotech_startup,US,False
+CUST-0129,Academic 129,academic,FR,False
+CUST-0130,Research Institute 130,research_institute,DE,False
+CUST-0131,Research Institute 131,research_institute,DE,False
+CUST-0132,Research Institute 132,research_institute,AU,False
+CUST-0133,Pharma Enterprise 133,pharma_enterprise,JP,False
+CUST-0134,Biotech Startup 134,biotech_startup,AU,False
+CUST-0135,Pharma Enterprise 135,pharma_enterprise,DE,False
+CUST-0136,Biotech Startup 136,biotech_startup,CA,False
+CUST-0137,Academic 137,academic,GB,False
+CUST-0138,Biotech Startup 138,biotech_startup,GB,False
+CUST-0139,Pharma Enterprise 139,pharma_enterprise,US,False
+CUST-0140,Biotech Startup 140,biotech_startup,US,False
+CUST-0141,Academic 141,academic,GB,False
+CUST-0142,Academic 142,academic,US,False
+CUST-0143,Research Institute 143,research_institute,DE,False
+CUST-0144,Pharma Enterprise 144,pharma_enterprise,CA,False
+CUST-0145,Pharma Enterprise 145,pharma_enterprise,FR,False
+CUST-0146,Research Institute 146,research_institute,US,False
+CUST-0147,Pharma Enterprise 147,pharma_enterprise,DE,False
+CUST-0148,Pharma Enterprise 148,pharma_enterprise,GB,False
+CUST-0149,Pharma Enterprise 149,pharma_enterprise,US,False
+CUST-0150,Research Institute 150,research_institute,GB,False
+CUST-0151,Pharma Enterprise 151,pharma_enterprise,GB,False
+CUST-0152,Biotech Startup 152,biotech_startup,JP,False
+CUST-0153,Biotech Startup 153,biotech_startup,US,False
+CUST-0154,Pharma Enterprise 154,pharma_enterprise,JP,False
+CUST-0155,Academic 155,academic,FR,False
+CUST-0156,Biotech Startup 156,biotech_startup,CA,False
+CUST-0157,Research Institute 157,research_institute,GB,False
+CUST-0158,Pharma Enterprise 158,pharma_enterprise,AU,False
+CUST-0159,Pharma Enterprise 159,pharma_enterprise,FR,False
+CUST-0160,Academic 160,academic,CA,False
+CUST-0161,Research Institute 161,research_institute,GB,False
+CUST-0162,Biotech Startup 162,biotech_startup,GB,False
+CUST-0163,Research Institute 163,research_institute,AU,False
+CUST-0164,Research Institute 164,research_institute,GB,False
+CUST-0165,Pharma Enterprise 165,pharma_enterprise,US,False
+CUST-0166,Biotech Startup 166,biotech_startup,US,False
+CUST-0167,Biotech Startup 167,biotech_startup,FR,False
+CUST-0168,Academic 168,academic,JP,True
+CUST-0169,Academic 169,academic,JP,False
+CUST-0170,Pharma Enterprise 170,pharma_enterprise,DE,False
+CUST-0171,Pharma Enterprise 171,pharma_enterprise,GB,False
+CUST-0172,Pharma Enterprise 172,pharma_enterprise,FR,False
+CUST-0173,Research Institute 173,research_institute,FR,False
+CUST-0174,Research Institute 174,research_institute,GB,False
+CUST-0175,Research Institute 175,research_institute,GB,False
+CUST-0176,Academic 176,academic,DE,True
+CUST-0177,Research Institute 177,research_institute,FR,False
+CUST-0178,Research Institute 178,research_institute,DE,False
+CUST-0179,Research Institute 179,research_institute,CA,False
+CUST-0180,Research Institute 180,research_institute,GB,False
+CUST-0181,Academic 181,academic,AU,True
+CUST-0182,Academic 182,academic,US,False
+CUST-0183,Research Institute 183,research_institute,US,False
+CUST-0184,Biotech Startup 184,biotech_startup,CA,False
+CUST-0185,Pharma Enterprise 185,pharma_enterprise,DE,False
+CUST-0186,Research Institute 186,research_institute,CA,False
+CUST-0187,Pharma Enterprise 187,pharma_enterprise,FR,False
+CUST-0188,Academic 188,academic,JP,False
+CUST-0189,Pharma Enterprise 189,pharma_enterprise,FR,False
+CUST-0190,Academic 190,academic,JP,False
+CUST-0191,Pharma Enterprise 191,pharma_enterprise,CA,False
+CUST-0192,Research Institute 192,research_institute,DE,False
+CUST-0193,Academic 193,academic,GB,False
+CUST-0194,Pharma Enterprise 194,pharma_enterprise,GB,False
+CUST-0195,Biotech Startup 195,biotech_startup,DE,False
+CUST-0196,Biotech Startup 196,biotech_startup,CA,False
+CUST-0197,Biotech Startup 197,biotech_startup,US,False
+CUST-0198,Research Institute 198,research_institute,CA,False
+CUST-0199,Academic 199,academic,CA,False
