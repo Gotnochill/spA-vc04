@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pricing AI - Debug Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .status-online { background-color: #10b981; }
+        .status-offline { background-color: #ef4444; }
+        .status-testing { background-color: #f59e0b; }
+        .debug-info { font-family: monospace; background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; }
+    </style>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-900 mb-8">Smart Pricing AI - Debug Dashboard</h1>
+        
+        <!-- Connection Status -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+            <h2 class="text-xl font-semibold mb-4">Connection Status</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <span>Backend Server (localhost:8000)</span>
+                    <div class="flex items-center">
+                        <div id="backendStatus" class="w-3 h-3 rounded-full status-offline mr-2"></div>
+                        <span id="backendStatusText">Checking...</span>
+                    </div>
+                </div>
+                <button onclick="testConnection()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                    Test Connection
+                </button>
+            </div>
+        </div>
+
+        <!-- Debug Information -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+            <h2 class="text-xl font-semibold mb-4">Debug Information</h2>
+            <div id="debugInfo" class="debug-info">
+                Click "Test Connection" to see debug information...
+            </div>
+        </div>
+
+        <!-- Simple API Test -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border mb-6">
+            <h2 class="text-xl font-semibold mb-4">Quick API Test</h2>
+            <div class="space-y-4">
+                <button onclick="testHealthEndpoint()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 mr-2">
+                    Test Health Endpoint
+                </button>
+                <button onclick="testPricingEndpoint()" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 mr-2">
+                    Test Pricing API
+                </button>
+                <button onclick="testAllEndpoints()" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+                    Test All Endpoints
+                </button>
+            </div>
+            <div id="testResults" class="mt-4 debug-info" style="display: none;">
+                Test results will appear here...
+            </div>
+        </div>
+
+        <!-- Manual Commands -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border">
+            <h2 class="text-xl font-semibold mb-4">Manual Testing Commands</h2>
+            <div class="space-y-2 text-sm debug-info">
+                <p><strong>1. Check if server is running:</strong></p>
+                <p>Open new terminal and run: <code>curl http://localhost:8000</code></p>
+                
+                <p class="mt-4"><strong>2. Start server manually:</strong></p>
+                <p>Navigate to project directory and run:</p>
+                <pre>cd d:\smartPricing
+source .venv/Scripts/activate
+cd backend
+python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000</pre>
+                
+                <p class="mt-4"><strong>3. Access API docs:</strong></p>
+                <p><a href="http://localhost:8000/docs" target="_blank" class="text-blue-600 underline">http://localhost:8000/docs</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_ROOT = 'http://localhost:8000';
+        const API_BASE = 'http://localhost:8000/api';
+
+        function updateDebugInfo(message) {
+            const debugDiv = document.getElementById('debugInfo');
+            const timestamp = new Date().toLocaleTimeString();
+            debugDiv.innerHTML += `[${timestamp}] ${message}\n`;
+        }
+
+        function clearDebugInfo() {
+            document.getElementById('debugInfo').innerHTML = '';
+        }
+
+        function updateStatus(isOnline, message) {
+            const statusDiv = document.getElementById('backendStatus');
+            const textDiv = document.getElementById('backendStatusText');
+            
+            statusDiv.className = `w-3 h-3 rounded-full ${isOnline ? 'status-online' : 'status-offline'} mr-2`;
+            textDiv.textContent = message;
+        }
+
+        async function testConnection() {
+            clearDebugInfo();
+            updateDebugInfo('Starting connection test...');
+            updateDebugInfo(`Attempting to connect to: ${API_ROOT}`);
+            
+            try {
+                // Test basic connectivity
+                updateDebugInfo('Testing basic connectivity...');
+                const response = await fetch(API_ROOT, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                updateDebugInfo(`Response status: ${response.status}`);
+                updateDebugInfo(`Response headers: ${JSON.stringify([...response.headers.entries()])}`);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    updateDebugInfo(`Response data: ${JSON.stringify(data, null, 2)}`);
+                    updateStatus(true, 'Connected');
+                    updateDebugInfo('✅ CONNECTION SUCCESSFUL');
+                } else {
+                    updateDebugInfo(`❌ HTTP Error: ${response.status} ${response.statusText}`);
+                    updateStatus(false, `HTTP ${response.status}`);
+                }
+            } catch (error) {
+                updateDebugInfo(`❌ Connection failed: ${error.message}`);
+                updateDebugInfo(`Error type: ${error.constructor.name}`);
+                updateStatus(false, 'Connection Failed');
+                
+                // Additional diagnostics
+                if (error.message.includes('fetch')) {
+                    updateDebugInfo('DIAGNOSIS: This might be a CORS issue or server not running');
+                    updateDebugInfo('SOLUTION: Check if server is running on port 8000');
+                }
+            }
+        }
+
+        async function testHealthEndpoint() {
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.style.display = 'block';
+            resultsDiv.innerHTML = 'Testing health endpoint...\n';
+            
+            try {
+                const response = await fetch(API_ROOT);
+                const data = await response.json();
+                resultsDiv.innerHTML += `✅ Health Check: ${JSON.stringify(data, null, 2)}\n`;
+            } catch (error) {
+                resultsDiv.innerHTML += `❌ Health Check Failed: ${error.message}\n`;
+            }
+        }
+
+        async function testPricingEndpoint() {
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.style.display = 'block';
+            resultsDiv.innerHTML += 'Testing pricing endpoint...\n';
+            
+            const testData = {
+                customer: {
+                    id: "CUST-0001",
+                    name: "Test Lab",
+                    segment: "academic",
+                    location: "Boston, MA",
+                    country: "US",
+                    tax_exempt: true
+                },
+                products: [{
+                    sku: "REA-0001",
+                    name: "Test Product",
+                    category: "reagents",
+                    supplier: "TestSupplier",
+                    weight_kg: 0.5,
+                    base_price: 100.00,
+                    hs_code: "3822"
+                }]
+            };
+            
+            try {
+                const response = await fetch(`${API_BASE}/pricing/recommendations`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(testData)
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    resultsDiv.innerHTML += `✅ Pricing API: ${JSON.stringify(data, null, 2)}\n`;
+                } else {
+                    resultsDiv.innerHTML += `❌ Pricing API Error: ${response.status} ${response.statusText}\n`;
+                }
+            } catch (error) {
+                resultsDiv.innerHTML += `❌ Pricing API Failed: ${error.message}\n`;
+            }
+        }
+
+        async function testAllEndpoints() {
+            const resultsDiv = document.getElementById('testResults');
+            resultsDiv.style.display = 'block';
+            resultsDiv.innerHTML = 'Testing all endpoints...\n\n';
+            
+            await testHealthEndpoint();
+            await testPricingEndpoint();
+            
+            resultsDiv.innerHTML += '\n=== TEST COMPLETE ===\n';
+        }
+
+        // Auto-test on page load
+        window.onload = function() {
+            updateDebugInfo('Page loaded. Ready for testing.');
+            testConnection();
+        };
+    </script>
+</body>
+</html>

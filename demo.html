@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pricing AI - Demo Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <h1 class="text-2xl font-bold text-gray-900">Smart Pricing AI</h1>
+                        <span class="ml-2 text-sm text-gray-500">Life Sciences Intelligence</span>
+                    </div>
+                    <nav class="flex space-x-8">
+                        <a href="#dashboard" class="text-blue-600 font-medium">Dashboard</a>
+                        <a href="#pricing" class="text-gray-700 hover:text-blue-600">Pricing</a>
+                        <a href="#shipping" class="text-gray-700 hover:text-blue-600">Shipping</a>
+                        <a href="#invoices" class="text-gray-700 hover:text-blue-600">Invoices</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Title -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-900">Smart Pricing Dashboard</h1>
+                <p class="mt-2 text-gray-600">AI-driven insights for life sciences e-commerce optimization</p>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <p class="text-sm font-medium text-gray-600">Total Revenue</p>
+                            <p class="text-2xl font-bold text-gray-900" id="totalRevenue">$2,847,392</p>
+                            <p class="text-sm text-green-600">+12.5% vs last month</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <p class="text-sm font-medium text-gray-600">Avg Margin</p>
+                            <p class="text-2xl font-bold text-gray-900" id="avgMargin">28.5%</p>
+                            <p class="text-sm text-green-600">+3.2% vs last month</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <p class="text-sm font-medium text-gray-600">Orders Processed</p>
+                            <p class="text-2xl font-bold text-gray-900" id="ordersProcessed">1,247</p>
+                            <p class="text-sm text-blue-600">+8.7% vs last month</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <p class="text-sm font-medium text-gray-600">Shipping Accuracy</p>
+                            <p class="text-2xl font-bold text-gray-900" id="shippingAccuracy">94.2%</p>
+                            <p class="text-sm text-green-600">+1.8% vs last month</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Demo Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Pricing Engine Demo -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Smart Pricing Engine</h3>
+                    <p class="text-gray-600 mb-4">Get AI-driven pricing recommendations</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Customer Segment</label>
+                            <select id="customerSegment" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                                <option value="academic">Academic</option>
+                                <option value="biotech_startup">Biotech Startup</option>
+                                <option value="pharma_enterprise">Pharma Enterprise</option>
+                                <option value="research_institute">Research Institute</option>
+                            </select>
+                        </div>
+                        
+                        <button onclick="testPricingAPI()" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors">
+                            Get Pricing Recommendations
+                        </button>
+                        
+                        <div id="pricingResults" class="mt-4 p-3 bg-gray-50 rounded-md hidden">
+                            <pre class="text-sm text-gray-800 whitespace-pre-wrap"></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipping Estimator Demo -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Shipping Estimator</h3>
+                    <p class="text-gray-600 mb-4">Calculate shipping costs with ML inference</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Destination Country</label>
+                            <select id="destinationCountry" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="DE">Germany</option>
+                                <option value="JP">Japan</option>
+                            </select>
+                        </div>
+                        
+                        <button onclick="testShippingAPI()" class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors">
+                            Estimate Shipping Cost
+                        </button>
+                        
+                        <div id="shippingResults" class="mt-4 p-3 bg-gray-50 rounded-md hidden">
+                            <pre class="text-sm text-gray-800 whitespace-pre-wrap"></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Invoice Generator Demo -->
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Invoice Generator</h3>
+                    <p class="text-gray-600 mb-4">Create dynamic invoices with adaptive fields</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Include Promotions</label>
+                            <select id="includePromotions" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                        
+                        <button onclick="testInvoiceAPI()" class="w-full bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors">
+                            Generate Invoice
+                        </button>
+                        
+                        <div id="invoiceResults" class="mt-4 p-3 bg-gray-50 rounded-md hidden">
+                            <pre class="text-sm text-gray-800 whitespace-pre-wrap"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="bg-white rounded-lg shadow-sm border">
+                <div class="px-6 py-4 border-b">
+                    <h3 class="text-lg font-semibold text-gray-900">Recent AI Activity</h3>
+                </div>
+                <div class="p-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-medium text-gray-900">Pricing optimization completed</p>
+                                <p class="text-sm text-gray-500">Academic customer segment - 15% margin improvement detected</p>
+                            </div>
+                            <span class="text-sm text-gray-500">2 hours ago</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-medium text-gray-900">Shipping cost model updated</p>
+                                <p class="text-sm text-gray-500">International rates recalibrated for Q1 2025</p>
+                            </div>
+                            <span class="text-sm text-gray-500">4 hours ago</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-medium text-gray-900">Invoice template optimized</p>
+                                <p class="text-sm text-gray-500">Pharma enterprise segment with new dynamic tariff fields</p>
+                            </div>
+                            <span class="text-sm text-gray-500">1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t mt-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <p class="text-center text-sm text-gray-500">
+                    © 2025 Smart Pricing AI. Built for Life Sciences E-Commerce Hackathon.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const API_BASE = 'http://127.0.0.1:8000/api';
+
+        // Sample data for API calls
+        const sampleCustomer = {
+            id: "CUST-0001",
+            name: "University Research Lab",
+            segment: "academic",
+            location: "Boston, MA",
+            country: "US",
+            tax_exempt: true
+        };
+
+        const sampleProducts = [
+            {
+                sku: "REA-0001",
+                name: "PCR Master Mix",
+                category: "reagents",
+                supplier: "ThermoFisher",
+                weight_kg: 0.5,
+                base_price: 150.00,
+                hs_code: "3822"
+            },
+            {
+                sku: "LAB-0002", 
+                name: "Micropipette Set",
+                category: "lab_equipment",
+                supplier: "Eppendorf",
+                weight_kg: 2.0,
+                base_price: 450.00,
+                hs_code: "9027"
+            }
+        ];
+
+        const sampleBasket = {
+            items: [
+                {
+                    product: sampleProducts[0],
+                    quantity: 2,
+                    unit_price: 150.00
+                },
+                {
+                    product: sampleProducts[1],
+                    quantity: 1,
+                    unit_price: 450.00
+                }
+            ],
+            customer: sampleCustomer,
+            destination_country: "US",
+            destination_zip: "02142"
+        };
+
+        async function testPricingAPI() {
+            try {
+                const segment = document.getElementById('customerSegment').value;
+                const customer = {...sampleCustomer, segment: segment};
+                
+                const response = await axios.post(`${API_BASE}/pricing/recommendations`, {
+                    customer: customer,
+                    products: sampleProducts
+                });
+                
+                document.getElementById('pricingResults').classList.remove('hidden');
+                document.getElementById('pricingResults').querySelector('pre').textContent = 
+                    JSON.stringify(response.data, null, 2);
+            } catch (error) {
+                console.error('Pricing API error:', error);
+                document.getElementById('pricingResults').classList.remove('hidden');
+                document.getElementById('pricingResults').querySelector('pre').textContent = 
+                    'Error: ' + error.message;
+            }
+        }
+
+        async function testShippingAPI() {
+            try {
+                const country = document.getElementById('destinationCountry').value;
+                const basket = {...sampleBasket, destination_country: country};
+                
+                const response = await axios.post(`${API_BASE}/shipping/estimate`, basket);
+                
+                document.getElementById('shippingResults').classList.remove('hidden');
+                document.getElementById('shippingResults').querySelector('pre').textContent = 
+                    JSON.stringify(response.data, null, 2);
+            } catch (error) {
+                console.error('Shipping API error:', error);
+                document.getElementById('shippingResults').classList.remove('hidden');
+                document.getElementById('shippingResults').querySelector('pre').textContent = 
+                    'Error: ' + error.message;
+            }
+        }
+
+        async function testInvoiceAPI() {
+            try {
+                const includePromotions = document.getElementById('includePromotions').value === 'true';
+                
+                const response = await axios.post(`${API_BASE}/invoices/generate?include_promotions=${includePromotions}`, sampleBasket);
+                
+                document.getElementById('invoiceResults').classList.remove('hidden');
+                document.getElementById('invoiceResults').querySelector('pre').textContent = 
+                    JSON.stringify(response.data, null, 2);
+            } catch (error) {
+                console.error('Invoice API error:', error);
+                document.getElementById('invoiceResults').classList.remove('hidden');
+                document.getElementById('invoiceResults').querySelector('pre').textContent = 
+                    'Error: ' + error.message;
+            }
+        }
+
+        // Test API connection on load
+        window.onload = async function() {
+            try {
+                const response = await axios.get('http://127.0.0.1:8000');
+                console.log('API connected:', response.data);
+            } catch (error) {
+                console.error('API connection failed:', error);
+            }
+        };
+    </script>
+</body>
+</html>
