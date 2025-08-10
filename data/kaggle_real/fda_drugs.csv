@@ -1,0 +1,101 @@
+brand_name,generic_name,manufacturer,application_number,estimated_price,category
+CARBOPLATIN,CARBOPLATIN,"Hospira, Inc.",ANDA076517,489.81,pharmaceuticals
+PIOGLITAZONE HYDROCHLORIDE,PIOGLITAZONE HYDROCHLORIDE,"Chartwell RX, LLC",ANDA076798,427.09,pharmaceuticals
+LEFLUNOMIDE,LEFLUNOMIDE,Apotex Corp.,ANDA077090,363.76,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA076246,197.09,pharmaceuticals
+CYCLOGYL,CYCLOPENTOLATE HYDROCHLORIDE,"Alcon Laboratories, Inc.",ANDA084109,159.77,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA084614,309.12,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA018168,356.27,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA085562,300.62,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA077988,362.42,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA077392,470.68,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA077693,227.98,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA078581,389.96,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA078288,394.02,pharmaceuticals
+EFAVIRENZ,EFAVIRENZ,"Camber Pharmaceuticals, Inc.",ANDA078886,117.77,pharmaceuticals
+IBUPROFEN,IBUPROFEN,"Winco Foods, LLC",ANDA079205,327.9,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA080514,119.77,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA081128,189.44,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA083486,69.52,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,BLA018263,276.62,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA086505,64.48,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA087144,251.39,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA087568,195.59,pharmaceuticals
+DILTIAZEM HYDROCHLORIDE,DILTIAZEM HYDROCHLORIDE,"Sun Pharmaceutical Industries, Inc.",ANDA090492,369.74,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA090825,128.74,pharmaceuticals
+ESZOPICLONE,ESZOPICLONE,"Teva Pharmaceuticals USA, Inc.",ANDA091169,482.42,pharmaceuticals
+ATRACURIUM BESYLATE,ATRACURIUM BESYLATE,Meitheal Pharmaceuticals Inc.,ANDA091488,109.83,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA088606,473.34,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA087939,340.36,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA088273,481.18,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA088900,466.63,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA089282,99.19,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA089660,266.07,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA090169,304.74,pharmaceuticals
+SIMPONI ARIA,GOLIMUMAB,"Janssen Biotech, Inc.",BLA125433,123.94,pharmaceuticals
+CASPOFUNGIN ACETATE,CASPOFUNGIN ACETATE,Sandoz Inc,ANDA200833,468.12,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA201654,109.54,pharmaceuticals
+ACYCLOVIR,ACYCLOVIR,Modavar Pharmaceuticals LLC,ANDA202168,380.1,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA202525,173.24,pharmaceuticals
+METOPROLOL TARTRATE AND HYDROCHLOROTHIAZIDE,METOPROLOL TARTRATE AND HYDROCHLOROTHIAZIDE,Alembic Pharmaceuticals Limited,ANDA202870,57.16,pharmaceuticals
+GABAPENTIN,GABAPENTIN,"ACI Healthcare USA, Inc.",ANDA203244,406.9,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA019271,267.21,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA019356,429.26,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA204394,315.24,pharmaceuticals
+MOVANTIK,NALOXEGOL OXALATE,RedHill Biopharma Ltd,NDA204760,146.56,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA019493,64.4,pharmaceuticals
+SOLIFENACIN SUCCINATE,SOLIFENACIN SUCCINATE,Alembic Pharmaceuticals Limited,ANDA205575,456.54,pharmaceuticals
+ATORVASTATIN CALCIUM,ATORVASTATIN CALCIUM,Micro Labs Limited,ANDA205945,464.41,pharmaceuticals
+THEOPHYLLINE,THEOPHYLLINE,"PAI Holdings, LLC dba PAI Pharma",ANDA206344,376.15,pharmaceuticals
+ASPIRIN-DIPYRIDAMOLE,ASPIRIN-DIPYRIDAMOLE,Zydus Lifesciences Limited,ANDA206753,107.09,pharmaceuticals
+CEFAZOLIN,CEFAZOLIN SODIUM,Baxter Healthcare Corporation,NDA207131,65.78,pharmaceuticals
+AUROVELA 1/20,NORETHINDRONE ACETATE AND ETHINYL ESTRADIOL,Aurobindo Pharma Limited,ANDA207506,410.27,pharmaceuticals
+OLUMIANT,BARICITINIB,Eli Lilly and Company,NDA207924,182.16,pharmaceuticals
+AMANTADINE HYDROCHLORIDE,AMANTADINE HYDROCHLORIDE,Zydus Lifesciences Limited,ANDA208278,70.09,pharmaceuticals
+DOXAZOSIN,DOXAZOSIN MESYLATE,"Upsher-Smith laboratories, LLC",ANDA209013,53.5,pharmaceuticals
+SELENIOUS ACID,SELENIOUS ACID,"American Regent, Inc.",NDA209379,345.91,pharmaceuticals
+OLMESARTAN MEDOXOMIL,OLMESARTAN MEDOXOMIL,"Rising Pharma Holdings, Inc.",ANDA208659,376.75,pharmaceuticals
+CLOBAZAM,CLOBAZAM,Amneal Pharmaceuticals NY LLC,ANDA209718,367.79,pharmaceuticals
+AMBRISENTAN,AMBRISENTAN,Zydus Lifesciences Limited,ANDA210058,158.83,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA210396,91.21,pharmaceuticals
+CONCENTRATED IBUPROFEN INFANTS,IBUPROFEN,"Wal-Mart Stores, Inc.",ANDA210755,422.31,pharmaceuticals
+TERIPARATIDE,TERIPARATIDE,Apotex Corp.,ANDA211097,345.34,pharmaceuticals
+METHYLERGONOVINE MALEATE,METHYLERGONOVINE MALEATE,"Teva Pharmaceuticals USA, Inc.",ANDA211455,145.11,pharmaceuticals
+TIZANIDINE,TIZANIDINE,"Ascend Laboratories, LLC",ANDA211798,169.18,pharmaceuticals
+METHENAMINE HIPPURATE,METHENAMINE HIPPURATE,Micro Labs Limited,ANDA212172,419.19,pharmaceuticals
+DRIZALMA SPRINKLE,DULOXETINE,"SUN PHARMACEUTICAL INDUSTRIES, INC.",NDA212516,108.95,pharmaceuticals
+AMPHETAMINE SULFATE,AMPHETAMINE SULFATE,"Lannett Company, Inc.",ANDA212901,400.22,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA020388,332.0,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA020417,333.05,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA214112,174.08,pharmaceuticals
+PHYTONADIONE,PHYTONADIONE,Cipla USA Inc.,ANDA214966,337.99,pharmaceuticals
+SAPROPTERIN DIHYDROCHLORIDE,SAPROPTERIN DIHYDROCHLORIDE,"Camber Pharmaceuticals, Inc.",ANDA215420,481.73,pharmaceuticals
+MOUNJARO,TIRZEPATIDE,Eli Lilly and Company,NDA215866,461.37,pharmaceuticals
+FLUPHENAZINE HYDROCHLORIDE,FLUPHENAZINE HYDROCHLORIDE,Dr. Reddys Laboratories Inc.,ANDA214534,394.65,pharmaceuticals
+LACOSAMIDE,LACOSAMIDE,XLCare Pharmaceuticals Inc.,ANDA216335,271.74,pharmaceuticals
+CHLORPROMAZINE HYDROCHLORIDE,CHLORPROMAZINE HYDROCHLORIDE,Aurobindo Pharma Limited,ANDA216788,90.47,pharmaceuticals
+GUANFACINE,GUANFACINE,Alembic Pharmaceuticals Limited,ANDA217269,204.89,pharmaceuticals
+JOENJA,LENIOLISIB,Pharming Healthcare Inc.,NDA217759,211.22,pharmaceuticals
+ZEVTERA,CEFTOBIPROLE MEDOCARIL SODIUM,La Jolla Pharmaceutical Company,NDA218275,266.36,pharmaceuticals
+PRUCALOPRIDE,PRUCALOPRIDE,Apotex Corp.,ANDA218977,497.58,pharmaceuticals
+AIMOVIG,ERENUMAB-AOOE,Amgen Inc,BLA761077,466.55,pharmaceuticals
+LOPREEZA,ESTRADIOL/NORETHINDRONE ACETATE,Amneal Pharmaceuticals NY LLC,NDA020907,441.72,pharmaceuticals
+TAMIFLU,OSELTAMIVIR PHOSPHATE,"Genentech, Inc.",NDA021246,398.62,pharmaceuticals
+SODIUM CHLORIDE,SODIUM CHLORIDE,Liebel-Flarsheim Company LLC,NDA021569,479.87,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA021956,183.52,pharmaceuticals
+EPIDUO,ADAPALENE AND BENZOYL PEROXIDE,"Galderma Laboratories, L.P.",NDA022320,232.18,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA011444,421.18,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA040116,342.66,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA011641,373.22,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,NDA050322,332.64,pharmaceuticals
+AUGMENTIN ES-600,AMOXICILLIN AND CLAVULANATE POTASSIUM,"USAntibiotics, LLC",NDA050755,490.41,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA061533,344.82,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA062354,315.23,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA062736,308.34,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA063295,121.1,pharmaceuticals
+CEFAZOLIN,CEFAZOLIN,Hikma Pharmaceuticals USA Inc.,ANDA065143,157.61,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA065405,146.39,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA070183,127.19,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA070514,255.21,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA070816,172.72,pharmaceuticals
+Unknown,Unknown,Unknown Pharma,ANDA071151,402.05,pharmaceuticals

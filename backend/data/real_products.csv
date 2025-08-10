@@ -1,0 +1,21 @@
+sku,name,molecular_formula,molecular_weight,complexity_score,category,supplier,base_price,weight_kg,hs_code,source,source_id
+CHEM-2244,2-acetyloxybenzoic acid,C9H8O4,180.16,0.1,organic_chemicals,Sigma-Aldrich,133.98,0.00018016,2934.99.90,PubChem,2244
+CHEM-3672,2-[4-(2-methylpropyl)phenyl]propanoic acid,C13H18O2,206.28,0.1,organic_chemicals,Cayman Chemical,131.94,0.00020628,2934.99.90,PubChem,3672
+CHEM-5090,3-(4-methylsulfonylphenyl)-4-phenyl-2H-furan-5-one,C17H14O4S,314.4,0.1,specialty_chemicals,Cayman Chemical,249.78,0.0003144,2934.99.90,PubChem,5090
+CHEM-5362129,"(2S,3aS,6aS)-1-[(2S)-2-[[(2S)-1-ethoxy-1-oxo-4-phenylbutan-2-yl]amino]propanoyl]-3,3a,4,5,6,6a-hexah",C23H32N2O5,416.5,0.1,organic_chemicals,Merck,282.58,0.0004165,2934.99.90,PubChem,5362129
+CHEM-5280343,"2-(3,4-dihydroxyphenyl)-3,5,7-trihydroxychromen-4-one",C15H10O7,302.23,0.1,specialty_chemicals,Merck,195.95,0.00030223,2934.99.90,PubChem,5280343
+CHEM-6918485,"4-[2-[(2R,3R)-3-(2,5-difluorophenyl)-3-hydroxy-4-(1,2,4-triazol-1-yl)butan-2-yl]-1,3-thiazol-4-yl]be",C22H17F2N5OS,437.5,0.1,specialty_chemicals,Cayman Chemical,278.26,0.0004375,2934.99.90,PubChem,6918485
+CHEM-5280445,"2-(3,4-dihydroxyphenyl)-5,7-dihydroxychromen-4-one",C15H10O6,286.24,0.1,specialty_chemicals,Sigma-Aldrich,198.69,0.00028624,2934.99.90,PubChem,5280445
+CHEM-439155,"(2S)-2-amino-4-[[(2S,3S,4R,5R)-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methylsulfanyl]butanoi",C14H20N6O5S,384.41,0.1,organic_chemicals,Merck,228.49,0.00038441,2934.99.90,PubChem,439155
+CHEM-135398633,"[[(2R,3S,4R,5R)-5-(2-amino-6-oxo-1H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy-hydroxyphosphoryl] ",C10H16N5O14P3,523.18,0.1,specialty_chemicals,Thermo Fisher,335.64,0.0005231799999999999,2934.99.90,PubChem,135398633
+CHEM-5281004,"(1S,2S,4R,8S,9S,11S,12S,13R)-11-hydroxy-8-(2-hydroxyacetyl)-9,13-dimethyl-6-propyl-5,7-dioxapentacyc",C25H34O6,430.5,0.1,specialty_chemicals,Sigma-Aldrich,300.61,0.0004305,2934.99.90,PubChem,5281004
+CHEM-60823,"(3R,5R)-7-[2-(4-fluorophenyl)-3-phenyl-4-(phenylcarbamoyl)-5-propan-2-ylpyrrol-1-yl]-3,5-dihydroxyhe",C33H35FN2O5,558.6,0.1,organic_chemicals,VWR,329.41,0.0005586,2934.99.90,PubChem,60823
+CHEM-2519,"1,3,7-trimethylpurine-2,6-dione",C8H10N4O2,194.19,0.1,specialty_chemicals,Merck,174.93,0.00019419,2934.99.90,PubChem,2519
+CHEM-3364,"6-[[3-(2-chloro-6-fluorophenyl)-5-methyl-1,2-oxazole-4-carbonyl]amino]-3,3-dimethyl-7-oxo-4-thia-1-a",C19H17ClFN3O5S,453.9,0.1,organic_chemicals,Cayman Chemical,241.1,0.0004539,2934.99.90,PubChem,3364
+CHEM-5282102,"5,7-dihydroxy-2-(4-hydroxyphenyl)-3-[(2S,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl]ox",C21H20O11,448.4,0.1,specialty_chemicals,Merck,291.16,0.0004484,2934.99.90,PubChem,5282102
+CHEM-5280863,"3,5,7-trihydroxy-2-(4-hydroxyphenyl)chromen-4-one",C15H10O6,286.24,0.1,specialty_chemicals,Thermo Fisher,213.37,0.00028624,2934.99.90,PubChem,5280863
+CHEM-681,"4-(2-aminoethyl)benzene-1,2-diol",C8H11NO2,153.18,0.1,specialty_chemicals,Merck,124.12,0.00015318,2934.99.90,PubChem,681
+CHEM-5280934,"(9Z,12Z,15Z)-octadeca-9,12,15-trienoic acid",C18H30O2,278.4,0.1,organic_chemicals,Cayman Chemical,197.34,0.0002784,2934.99.90,PubChem,5280934
+CHEM-5090,3-(4-methylsulfonylphenyl)-4-phenyl-2H-furan-5-one,C17H14O4S,314.4,0.1,specialty_chemicals,VWR,187.86,0.0003144,2934.99.90,PubChem,5090
+CHEM-5359596,arsenic,As,74.92159,0.1,specialty_chemicals,Sigma-Aldrich,54.3,7.492159e-05,2934.99.90,PubChem,5359596
+CHEM-4485,"dimethyl 2,6-dimethyl-4-(2-nitrophenyl)-1,4-dihydropyridine-3,5-dicarboxylate",C17H18N2O6,346.3,0.1,specialty_chemicals,Cayman Chemical,187.18,0.0003463,2934.99.90,PubChem,4485

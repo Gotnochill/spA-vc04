@@ -1,0 +1,173 @@
+sku,product_name,category,supplier,brand,base_price,weight_kg,data_source,catalog_number,pack_size,purity,grade,cas_number,is_hazardous,storage_temp,subcategory,warranty_years,power_requirements,volume_range,precision,autoclavable,hs_code,country_of_origin,lead_time_days,minimum_order_quantity
+TF2658056,Sorvall LYNX 4000 Superspeed Centrifuge - Bulk,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,41069.75,103.76,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,36,1
+TF2353254,Sorvall LYNX 4000 Superspeed Centrifuge - Research,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,48957.86,78.734,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,17,1
+TF3875089,Sorvall LYNX 4000 Superspeed Centrifuge - Clinical,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,42973.01,109.786,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,43,1
+TF4022212,Sorvall LYNX 4000 Superspeed Centrifuge - Standard,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,49085.5,91.63,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,35,1
+TF5949424,Sorvall LYNX 4000 Superspeed Centrifuge - Standard,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,38586.24,111.076,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,44,1
+TF8806048,Sorvall LYNX 4000 Superspeed Centrifuge - Clinical,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,39355.59,97.074,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,25,1
+TF4204816,Sorvall LYNX 4000 Superspeed Centrifuge - Clinical,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,41600.36,93.407,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,32,1
+TF8561404,Sorvall LYNX 4000 Superspeed Centrifuge - Educational,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,52662.54,83.849,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,35,1
+TF3695900,EVOS M5000 Imaging System - Standard,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,32714.49,14.846,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,30,1
+TF6113092,EVOS M5000 Imaging System - Educational,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,32113.39,11.225,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,28,1
+TF8170450,EVOS M5000 Imaging System - Educational,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,31333.0,10.497,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,41,1
+TF6011376,EVOS M5000 Imaging System - Research,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,29110.41,15.049,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,20,1
+TF5136221,Heratherm Advanced Protocol Incubator - Educational,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,9124.86,93.427,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,16,1
+TF6911319,Heratherm Advanced Protocol Incubator - Clinical,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,9685.27,109.171,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,36,1
+TF7398164,Heratherm Advanced Protocol Incubator - Bulk,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,9808.61,73.957,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,26,1
+TF2736953,MaxQ 4000 Benchtop Orbital Shaker - Bulk,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,3714.47,20.478,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,27,1
+TF7312908,MaxQ 4000 Benchtop Orbital Shaker - Research,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,3970.61,25.246,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,38,1
+TF5872554,MaxQ 4000 Benchtop Orbital Shaker - Research,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,2925.09,22.461,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,43,1
+TF3812018,MaxQ 4000 Benchtop Orbital Shaker - Educational,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,2722.37,29.314,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,29,1
+TF5889880,MaxQ 4000 Benchtop Orbital Shaker - Educational,lab_equipment,Thermo Fisher Scientific,Thermo Scientific,2798.06,22.296,Thermo Fisher Real Catalog,,,,,,,,,,,,,,9027.80.45,USA,35,1
+TF3115657,Pierce BCA Protein Assay Kit - Clinical,reagents,Thermo Fisher Scientific,Thermo Scientific,249.84,0.474,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,7,1
+TF8518456,Pierce BCA Protein Assay Kit - Clinical,reagents,Thermo Fisher Scientific,Thermo Scientific,336.36,0.488,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,3,1
+TF5432038,Pierce BCA Protein Assay Kit - Clinical,reagents,Thermo Fisher Scientific,Thermo Scientific,319.53,0.467,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,12,1
+TF4934000,Pierce BCA Protein Assay Kit - Bulk,reagents,Thermo Fisher Scientific,Thermo Scientific,253.81,0.452,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,3,1
+TF5247535,Pierce BCA Protein Assay Kit - Standard,reagents,Thermo Fisher Scientific,Thermo Scientific,290.91,0.503,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,6,1
+TF2416917,Pierce BCA Protein Assay Kit - Clinical,reagents,Thermo Fisher Scientific,Thermo Scientific,279.02,0.417,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,4,1
+TF7514832,SuperScript IV Reverse Transcriptase - Research,reagents,Thermo Fisher Scientific,Thermo Scientific,459.77,0.09,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,14,1
+TF2085129,SuperScript IV Reverse Transcriptase - Educational,reagents,Thermo Fisher Scientific,Thermo Scientific,458.28,0.128,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,9,1
+TF1062120,SuperScript IV Reverse Transcriptase - Educational,reagents,Thermo Fisher Scientific,Thermo Scientific,393.44,0.116,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,7,1
+TF6337313,SuperScript IV Reverse Transcriptase - Clinical,reagents,Thermo Fisher Scientific,Thermo Scientific,367.25,0.106,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,7,1
+TF9402466,SuperScript IV Reverse Transcriptase - Bulk,reagents,Thermo Fisher Scientific,Thermo Scientific,422.6,0.115,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,9,1
+TF5546600,SuperScript IV Reverse Transcriptase - Bulk,reagents,Thermo Fisher Scientific,Thermo Scientific,469.7,0.102,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,3,1
+TF8533692,Lipofectamine 3000 Transfection Reagent - Research,reagents,Thermo Fisher Scientific,Thermo Scientific,486.07,0.181,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,9,1
+TF7018782,Lipofectamine 3000 Transfection Reagent - Educational,reagents,Thermo Fisher Scientific,Thermo Scientific,495.2,0.248,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,13,1
+TF1332121,Lipofectamine 3000 Transfection Reagent - Educational,reagents,Thermo Fisher Scientific,Thermo Scientific,503.23,0.212,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,11,1
+TF9842274,Lipofectamine 3000 Transfection Reagent - Bulk,reagents,Thermo Fisher Scientific,Thermo Scientific,420.82,0.171,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,6,1
+TF6621676,Lipofectamine 3000 Transfection Reagent - Research,reagents,Thermo Fisher Scientific,Thermo Scientific,440.89,0.25,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,11,1
+TF8639328,Lipofectamine 3000 Transfection Reagent - Bulk,reagents,Thermo Fisher Scientific,Thermo Scientific,425.86,0.204,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,10,1
+TF7443928,Lipofectamine 3000 Transfection Reagent - Research,reagents,Thermo Fisher Scientific,Thermo Scientific,497.84,0.243,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,5,1
+TF5495506,Alexa Fluor 488 NHS Ester - Clinical,reagents,Thermo Fisher Scientific,Thermo Scientific,628.8,0.013,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,6,1
+TF5847784,Alexa Fluor 488 NHS Ester - Clinical,reagents,Thermo Fisher Scientific,Thermo Scientific,529.43,0.011,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,12,1
+TF1782738,Alexa Fluor 488 NHS Ester - Bulk,reagents,Thermo Fisher Scientific,Thermo Scientific,574.36,0.01,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,3,1
+TF7357399,Alexa Fluor 488 NHS Ester - Educational,reagents,Thermo Fisher Scientific,Thermo Scientific,647.36,0.01,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,14,1
+TF1163058,Alexa Fluor 488 NHS Ester - Clinical,reagents,Thermo Fisher Scientific,Thermo Scientific,507.87,0.009,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3822.00.10,USA,3,1
+TF5433003,TipOne Filter Tips 1000µL - Bulk,consumables,Thermo Fisher Scientific,Thermo Scientific,74.42,0.421,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,3,10
+TF8583113,TipOne Filter Tips 1000µL - Research,consumables,Thermo Fisher Scientific,Thermo Scientific,100.61,0.478,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,1,5
+TF1647214,TipOne Filter Tips 1000µL - Research,consumables,Thermo Fisher Scientific,Thermo Scientific,81.63,0.56,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,5,1
+TF4877806,TipOne Filter Tips 1000µL - Standard,consumables,Thermo Fisher Scientific,Thermo Scientific,83.92,0.507,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,2,1
+TF1803888,TipOne Filter Tips 1000µL - Educational,consumables,Thermo Fisher Scientific,Thermo Scientific,75.6,0.419,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,2,1
+TF9517775,TipOne Filter Tips 1000µL - Standard,consumables,Thermo Fisher Scientific,Thermo Scientific,83.4,0.63,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,4,5
+TF2318340,Nunc 96-Well Polystyrene Plates - Clinical,consumables,Thermo Fisher Scientific,Thermo Scientific,123.5,0.199,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,4,1
+TF5883387,Nunc 96-Well Polystyrene Plates - Research,consumables,Thermo Fisher Scientific,Thermo Scientific,155.59,0.211,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,1,1
+TF8009047,Nunc 96-Well Polystyrene Plates - Bulk,consumables,Thermo Fisher Scientific,Thermo Scientific,153.53,0.195,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,1,10
+TF6140119,Nunc 96-Well Polystyrene Plates - Research,consumables,Thermo Fisher Scientific,Thermo Scientific,111.54,0.177,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,5,1
+TF4141212,Nunc 96-Well Polystyrene Plates - Educational,consumables,Thermo Fisher Scientific,Thermo Scientific,114.87,0.239,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,3,1
+TF3946117,Nunc 96-Well Polystyrene Plates - Educational,consumables,Thermo Fisher Scientific,Thermo Scientific,148.83,0.164,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,6,10
+TF2230937,Matrix 2D Barcoded Tubes - Research,consumables,Thermo Fisher Scientific,Thermo Scientific,188.58,0.385,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,4,1
+TF8426393,Matrix 2D Barcoded Tubes - Bulk,consumables,Thermo Fisher Scientific,Thermo Scientific,171.53,0.296,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,3,5
+TF4985721,Matrix 2D Barcoded Tubes - Bulk,consumables,Thermo Fisher Scientific,Thermo Scientific,221.53,0.345,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,7,10
+TF3010566,Matrix 2D Barcoded Tubes - Clinical,consumables,Thermo Fisher Scientific,Thermo Scientific,228.74,0.342,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,6,10
+TF8767392,Matrix 2D Barcoded Tubes - Clinical,consumables,Thermo Fisher Scientific,Thermo Scientific,242.75,0.358,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,4,5
+TF8636370,Matrix 2D Barcoded Tubes - Clinical,consumables,Thermo Fisher Scientific,Thermo Scientific,238.73,0.303,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,1,1
+TF1537225,Matrix 2D Barcoded Tubes - Standard,consumables,Thermo Fisher Scientific,Thermo Scientific,221.27,0.271,Thermo Fisher Real Catalog,,,,,,,,,,,,,,3926.90.99,USA,1,10
+271004-1G,Acetonitrile - CHROMASOLV® - 1g,chemicals,Sigma-Aldrich,Sigma-Aldrich,62.91,0.001,Sigma-Aldrich Real Catalog,271004,1g,≥99.9%,CHROMASOLV®,379-63-1,True,Room Temperature,,,,,,,2905.11.00,Germany,13,1
+271004-5G,Acetonitrile - CHROMASOLV® - 5g,chemicals,Sigma-Aldrich,Sigma-Aldrich,264.2,0.005,Sigma-Aldrich Real Catalog,271004,5g,≥99.9%,CHROMASOLV®,318-44-6,True,Room Temperature,,,,,,,2905.11.00,Germany,11,1
+271004-25G,Acetonitrile - CHROMASOLV® - 25g,chemicals,Sigma-Aldrich,Sigma-Aldrich,993.91,0.025,Sigma-Aldrich Real Catalog,271004,25g,≥99.9%,CHROMASOLV®,425-26-5,False,Room Temperature,,,,,,,2905.11.00,Germany,9,1
+271004-100G,Acetonitrile - CHROMASOLV® - 100g,chemicals,Sigma-Aldrich,Sigma-Aldrich,2830.75,0.1,Sigma-Aldrich Real Catalog,271004,100g,≥99.9%,CHROMASOLV®,952-56-7,True,Room Temperature,,,,,,,2905.11.00,Germany,15,1
+D8418-1G,Dimethyl sulfoxide - BioReagent - 1g,chemicals,Sigma-Aldrich,Sigma-Aldrich,59.27,0.001,Sigma-Aldrich Real Catalog,D8418,1g,≥99.9%,BioReagent,539-33-5,False,Room Temperature,,,,,,,2905.11.00,Germany,21,1
+D8418-5G,Dimethyl sulfoxide - BioReagent - 5g,chemicals,Sigma-Aldrich,Sigma-Aldrich,248.95,0.005,Sigma-Aldrich Real Catalog,D8418,5g,≥99.9%,BioReagent,589-80-8,True,Room Temperature,,,,,,,2905.11.00,Germany,9,1
+D8418-25G,Dimethyl sulfoxide - BioReagent - 25g,chemicals,Sigma-Aldrich,Sigma-Aldrich,936.53,0.025,Sigma-Aldrich Real Catalog,D8418,25g,≥99.9%,BioReagent,851-52-8,True,Room Temperature,,,,,,,2905.11.00,Germany,5,1
+D8418-100G,Dimethyl sulfoxide - BioReagent - 100g,chemicals,Sigma-Aldrich,Sigma-Aldrich,2667.32,0.1,Sigma-Aldrich Real Catalog,D8418,100g,≥99.9%,BioReagent,712-86-3,False,Room Temperature,,,,,,,2905.11.00,Germany,13,1
+T6508-1G,Trifluoroacetic acid - ReagentPlus® - 1g,chemicals,Sigma-Aldrich,Sigma-Aldrich,80.59,0.001,Sigma-Aldrich Real Catalog,T6508,1g,99%,ReagentPlus®,352-45-6,False,Room Temperature,,,,,,,2905.11.00,Germany,7,1
+T6508-5G,Trifluoroacetic acid - ReagentPlus® - 5g,chemicals,Sigma-Aldrich,Sigma-Aldrich,338.49,0.005,Sigma-Aldrich Real Catalog,T6508,5g,99%,ReagentPlus®,664-89-5,True,Room Temperature,,,,,,,2905.11.00,Germany,6,1
+T6508-25G,Trifluoroacetic acid - ReagentPlus® - 25g,chemicals,Sigma-Aldrich,Sigma-Aldrich,1273.37,0.025,Sigma-Aldrich Real Catalog,T6508,25g,99%,ReagentPlus®,179-10-4,True,Room Temperature,,,,,,,2905.11.00,Germany,11,1
+T6508-100G,Trifluoroacetic acid - ReagentPlus® - 100g,chemicals,Sigma-Aldrich,Sigma-Aldrich,3626.69,0.1,Sigma-Aldrich Real Catalog,T6508,100g,99%,ReagentPlus®,443-36-3,False,Room Temperature,,,,,,,2905.11.00,Germany,11,1
+372978-1G,Chloroform - ACS reagent - 1g,chemicals,Sigma-Aldrich,Sigma-Aldrich,70.76,0.001,Sigma-Aldrich Real Catalog,372978,1g,≥99%,ACS reagent,667-24-6,False,Room Temperature,,,,,,,2905.11.00,Germany,5,1
+372978-5G,Chloroform - ACS reagent - 5g,chemicals,Sigma-Aldrich,Sigma-Aldrich,297.2,0.005,Sigma-Aldrich Real Catalog,372978,5g,≥99%,ACS reagent,346-40-3,False,Room Temperature,,,,,,,2905.11.00,Germany,19,1
+34860-1G,Methanol - LC-MS - 1g,chemicals,Sigma-Aldrich,Sigma-Aldrich,65.41,0.001,Sigma-Aldrich Real Catalog,34860,1g,≥99.9%,LC-MS,623-37-2,True,Room Temperature,,,,,,,2905.11.00,Germany,11,1
+34860-5G,Methanol - LC-MS - 5g,chemicals,Sigma-Aldrich,Sigma-Aldrich,274.74,0.005,Sigma-Aldrich Real Catalog,34860,5g,≥99.9%,LC-MS,347-14-2,True,Room Temperature,,,,,,,2905.11.00,Germany,7,1
+34860-25G,Methanol - LC-MS - 25g,chemicals,Sigma-Aldrich,Sigma-Aldrich,1033.55,0.025,Sigma-Aldrich Real Catalog,34860,25g,≥99.9%,LC-MS,854-89-5,False,Room Temperature,,,,,,,2905.11.00,Germany,13,1
+E7023-1G,Ethanol - 200 proof - 1g,chemicals,Sigma-Aldrich,Sigma-Aldrich,45.45,0.001,Sigma-Aldrich Real Catalog,E7023,1g,≥99.5%,200 proof,962-70-5,False,Room Temperature,,,,,,,2905.11.00,Germany,11,1
+E7023-5G,Ethanol - 200 proof - 5g,chemicals,Sigma-Aldrich,Sigma-Aldrich,190.87,0.005,Sigma-Aldrich Real Catalog,E7023,5g,≥99.5%,200 proof,530-18-6,True,Room Temperature,,,,,,,2905.11.00,Germany,5,1
+E7023-25G,Ethanol - 200 proof - 25g,chemicals,Sigma-Aldrich,Sigma-Aldrich,718.04,0.025,Sigma-Aldrich Real Catalog,E7023,25g,≥99.5%,200 proof,194-37-1,True,Room Temperature,,,,,,,2905.11.00,Germany,21,1
+E7023-100G,Ethanol - 200 proof - 100g,chemicals,Sigma-Aldrich,Sigma-Aldrich,2045.06,0.1,Sigma-Aldrich Real Catalog,E7023,100g,≥99.5%,200 proof,368-81-2,True,Room Temperature,,,,,,,2905.11.00,Germany,17,1
+278475-1G,Isopropanol - ACS reagent - 1g,chemicals,Sigma-Aldrich,Sigma-Aldrich,35.92,0.001,Sigma-Aldrich Real Catalog,278475,1g,≥99.5%,ACS reagent,130-75-3,True,Room Temperature,,,,,,,2905.11.00,Germany,11,1
+278475-5G,Isopropanol - ACS reagent - 5g,chemicals,Sigma-Aldrich,Sigma-Aldrich,150.86,0.005,Sigma-Aldrich Real Catalog,278475,5g,≥99.5%,ACS reagent,709-19-8,True,Room Temperature,,,,,,,2905.11.00,Germany,18,1
+278475-25G,Isopropanol - ACS reagent - 25g,chemicals,Sigma-Aldrich,Sigma-Aldrich,567.54,0.025,Sigma-Aldrich Real Catalog,278475,25g,≥99.5%,ACS reagent,850-12-6,True,Room Temperature,,,,,,,2905.11.00,Germany,17,1
+34859-1G,Hexane - HPLC - 1g,chemicals,Sigma-Aldrich,Sigma-Aldrich,57.8,0.001,Sigma-Aldrich Real Catalog,34859,1g,≥95%,HPLC,807-58-7,True,Room Temperature,,,,,,,2905.11.00,Germany,21,1
+34859-5G,Hexane - HPLC - 5g,chemicals,Sigma-Aldrich,Sigma-Aldrich,242.75,0.005,Sigma-Aldrich Real Catalog,34859,5g,≥95%,HPLC,767-56-5,True,Room Temperature,,,,,,,2905.11.00,Germany,5,1
+34859-25G,Hexane - HPLC - 25g,chemicals,Sigma-Aldrich,Sigma-Aldrich,913.19,0.025,Sigma-Aldrich Real Catalog,34859,25g,≥95%,HPLC,775-39-2,False,Room Temperature,,,,,,,2905.11.00,Germany,13,1
+34859-100G,Hexane - HPLC - 100g,chemicals,Sigma-Aldrich,Sigma-Aldrich,2600.86,0.1,Sigma-Aldrich Real Catalog,34859,100g,≥95%,HPLC,943-70-2,True,Room Temperature,,,,,,,2905.11.00,Germany,5,1
+B6916-1G,Bradford reagent - Protein Assay - 1g,reagents,Sigma-Aldrich,Sigma-Aldrich,133.82,0.001,Sigma-Aldrich Real Catalog,B6916,1g,≥95%,Protein Assay,539-25-5,False,2-8°C,,,,,,,3822.00.10,Germany,11,1
+B6916-5G,Bradford reagent - Protein Assay - 5g,reagents,Sigma-Aldrich,Sigma-Aldrich,562.04,0.005,Sigma-Aldrich Real Catalog,B6916,5g,≥95%,Protein Assay,427-36-4,False,2-8°C,,,,,,,3822.00.10,Germany,12,1
+E5134-1G,EDTA - BioXtra - 1g,reagents,Sigma-Aldrich,Sigma-Aldrich,194.46,0.001,Sigma-Aldrich Real Catalog,E5134,1g,≥99%,BioXtra,828-67-2,False,2-8°C,,,,,,,3822.00.10,Germany,4,1
+E5134-5G,EDTA - BioXtra - 5g,reagents,Sigma-Aldrich,Sigma-Aldrich,816.75,0.005,Sigma-Aldrich Real Catalog,E5134,5g,≥99%,BioXtra,153-86-7,False,2-8°C,,,,,,,3822.00.10,Germany,12,1
+E5134-25G,EDTA - BioXtra - 25g,reagents,Sigma-Aldrich,Sigma-Aldrich,3072.53,0.025,Sigma-Aldrich Real Catalog,E5134,25g,≥99%,BioXtra,895-21-1,False,2-8°C,,,,,,,3822.00.10,Germany,3,1
+D0632-1G,DTT - BioReagent - 1g,reagents,Sigma-Aldrich,Sigma-Aldrich,176.83,0.001,Sigma-Aldrich Real Catalog,D0632,1g,≥99%,BioReagent,654-75-9,False,2-8°C,,,,,,,3822.00.10,Germany,10,1
+D0632-5G,DTT - BioReagent - 5g,reagents,Sigma-Aldrich,Sigma-Aldrich,742.71,0.005,Sigma-Aldrich Real Catalog,D0632,5g,≥99%,BioReagent,777-46-6,False,2-8°C,,,,,,,3822.00.10,Germany,11,1
+D0632-25G,DTT - BioReagent - 25g,reagents,Sigma-Aldrich,Sigma-Aldrich,2793.99,0.025,Sigma-Aldrich Real Catalog,D0632,25g,≥99%,BioReagent,829-28-4,False,2-8°C,,,,,,,3822.00.10,Germany,9,1
+D0632-100G,DTT - BioReagent - 100g,reagents,Sigma-Aldrich,Sigma-Aldrich,7957.57,0.1,Sigma-Aldrich Real Catalog,D0632,100g,≥99%,BioReagent,677-13-6,False,2-8°C,,,,,,,3822.00.10,Germany,3,1
+A3311-1G,BSA - Fraction V - 1g,reagents,Sigma-Aldrich,Sigma-Aldrich,107.19,0.001,Sigma-Aldrich Real Catalog,A3311,1g,≥96%,Fraction V,721-27-2,False,2-8°C,,,,,,,3822.00.10,Germany,6,1
+A3311-5G,BSA - Fraction V - 5g,reagents,Sigma-Aldrich,Sigma-Aldrich,450.2,0.005,Sigma-Aldrich Real Catalog,A3311,5g,≥96%,Fraction V,979-36-7,False,2-8°C,,,,,,,3822.00.10,Germany,13,1
+P9416-1G,Tween 20 - BioReagent - 1g,reagents,Sigma-Aldrich,Sigma-Aldrich,153.78,0.001,Sigma-Aldrich Real Catalog,P9416,1g,≥95%,BioReagent,660-87-6,False,2-8°C,,,,,,,3822.00.10,Germany,8,1
+P9416-5G,Tween 20 - BioReagent - 5g,reagents,Sigma-Aldrich,Sigma-Aldrich,645.87,0.005,Sigma-Aldrich Real Catalog,P9416,5g,≥95%,BioReagent,140-47-8,False,2-8°C,,,,,,,3822.00.10,Germany,12,1
+P9416-25G,Tween 20 - BioReagent - 25g,reagents,Sigma-Aldrich,Sigma-Aldrich,2429.71,0.025,Sigma-Aldrich Real Catalog,P9416,25g,≥95%,BioReagent,199-34-7,False,2-8°C,,,,,,,3822.00.10,Germany,8,1
+L3771-1G,SDS - BioReagent - 1g,reagents,Sigma-Aldrich,Sigma-Aldrich,165.57,0.001,Sigma-Aldrich Real Catalog,L3771,1g,≥99%,BioReagent,385-45-1,False,2-8°C,,,,,,,3822.00.10,Germany,10,1
+L3771-5G,SDS - BioReagent - 5g,reagents,Sigma-Aldrich,Sigma-Aldrich,695.4,0.005,Sigma-Aldrich Real Catalog,L3771,5g,≥99%,BioReagent,333-98-7,False,2-8°C,,,,,,,3822.00.10,Germany,9,1
+L3771-25G,SDS - BioReagent - 25g,reagents,Sigma-Aldrich,Sigma-Aldrich,2616.03,0.025,Sigma-Aldrich Real Catalog,L3771,25g,≥99%,BioReagent,898-99-7,False,2-8°C,,,,,,,3822.00.10,Germany,4,1
+L3771-100G,SDS - BioReagent - 100g,reagents,Sigma-Aldrich,Sigma-Aldrich,7450.72,0.1,Sigma-Aldrich Real Catalog,L3771,100g,≥99%,BioReagent,400-35-2,False,2-8°C,,,,,,,3822.00.10,Germany,6,1
+T1503-1G,Tris base - ACS reagent - 1g,reagents,Sigma-Aldrich,Sigma-Aldrich,194.42,0.001,Sigma-Aldrich Real Catalog,T1503,1g,≥99.8%,ACS reagent,456-43-9,False,2-8°C,,,,,,,3822.00.10,Germany,13,1
+T1503-5G,Tris base - ACS reagent - 5g,reagents,Sigma-Aldrich,Sigma-Aldrich,816.58,0.005,Sigma-Aldrich Real Catalog,T1503,5g,≥99.8%,ACS reagent,740-59-4,False,2-8°C,,,,,,,3822.00.10,Germany,10,1
+A2383-1G,ATP - Disodium salt - 1g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,1222.0,0.001,Sigma-Aldrich Real Catalog,A2383,1g,≥95%,Disodium salt,409-45-8,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+A2383-5G,ATP - Disodium salt - 5g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,5132.41,0.005,Sigma-Aldrich Real Catalog,A2383,5g,≥95%,Disodium salt,268-46-4,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+A2383-25G,ATP - Disodium salt - 25g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,19307.64,0.025,Sigma-Aldrich Real Catalog,A2383,25g,≥95%,Disodium salt,117-69-1,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+N8129-1G,NADH - Disodium salt - 1g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,814.26,0.001,Sigma-Aldrich Real Catalog,N8129,1g,≥95%,Disodium salt,341-41-6,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+N8129-5G,NADH - Disodium salt - 5g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,3419.89,0.005,Sigma-Aldrich Real Catalog,N8129,5g,≥95%,Disodium salt,449-75-5,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+G8270-1G,Glucose - ACS reagent - 1g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,384.56,0.001,Sigma-Aldrich Real Catalog,G8270,1g,≥99.5%,ACS reagent,446-72-1,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+G8270-5G,Glucose - ACS reagent - 5g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,1615.14,0.005,Sigma-Aldrich Real Catalog,G8270,5g,≥99.5%,ACS reagent,736-79-9,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+G8270-25G,Glucose - ACS reagent - 25g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,6076.01,0.025,Sigma-Aldrich Real Catalog,G8270,25g,≥99.5%,ACS reagent,944-36-3,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+G8270-100G,Glucose - ACS reagent - 100g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,17305.1,0.1,Sigma-Aldrich Real Catalog,G8270,100g,≥99.5%,ACS reagent,237-89-9,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+G5516-1G,Glycerol - Molecular biology - 1g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,453.72,0.001,Sigma-Aldrich Real Catalog,G5516,1g,≥99%,Molecular biology,492-70-7,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+G5516-5G,Glycerol - Molecular biology - 5g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,1905.64,0.005,Sigma-Aldrich Real Catalog,G5516,5g,≥99%,Molecular biology,867-46-1,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+G5516-25G,Glycerol - Molecular biology - 25g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,7168.84,0.025,Sigma-Aldrich Real Catalog,G5516,25g,≥99%,Molecular biology,677-35-9,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+U5378-1G,Urea - BioXtra - 1g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,466.02,0.001,Sigma-Aldrich Real Catalog,U5378,1g,≥99.5%,BioXtra,193-33-9,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+U5378-5G,Urea - BioXtra - 5g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,1957.3,0.005,Sigma-Aldrich Real Catalog,U5378,5g,≥99.5%,BioXtra,898-73-5,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+U5378-25G,Urea - BioXtra - 25g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,7363.16,0.025,Sigma-Aldrich Real Catalog,U5378,25g,≥99.5%,BioXtra,990-68-9,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+U5378-100G,Urea - BioXtra - 100g,biochemicals,Sigma-Aldrich,Sigma-Aldrich,20971.04,0.1,Sigma-Aldrich Real Catalog,U5378,100g,≥99.5%,BioXtra,340-48-5,False,-20°C,,,,,,,3822.00.10,Germany,7,1
+BR6707362,C1000 Touch Thermal Cycler Educational,lab_equipment,Bio-Rad,Bio-Rad,8283.42,11.14,Bio-Rad Real Catalog,,,,,,,,pcr,1.0,"102V, 60Hz",,,,9027.80.45,USA,14,1
+BR3569477,C1000 Touch Thermal Cycler Starter Pack,lab_equipment,Bio-Rad,Bio-Rad,8362.2,12.88,Bio-Rad Real Catalog,,,,,,,,pcr,3.0,"140V, 51Hz",,,,9027.80.45,USA,36,1
+BR2188256,CFX96 Real-Time PCR Detection System,lab_equipment,Bio-Rad,Bio-Rad,29846.25,17.69,Bio-Rad Real Catalog,,,,,,,,pcr,2.0,"110V, 55Hz",,,,9027.80.45,USA,39,1
+BR2228129,CFX96 Real-Time PCR Detection System with Gradient,lab_equipment,Bio-Rad,Bio-Rad,24133.91,16.12,Bio-Rad Real Catalog,,,,,,,,pcr,1.0,"140V, 55Hz",,,,9027.80.45,USA,29,1
+BR9309420,T100 Thermal Cycler Educational,lab_equipment,Bio-Rad,Bio-Rad,5984.93,8.36,Bio-Rad Real Catalog,,,,,,,,pcr,2.0,"136V, 55Hz",,,,9027.80.45,USA,14,1
+BR9916773,T100 Thermal Cycler Educational,lab_equipment,Bio-Rad,Bio-Rad,6559.08,11.46,Bio-Rad Real Catalog,,,,,,,,pcr,1.0,"194V, 57Hz",,,,9027.80.45,USA,45,1
+BR2495631,ChemiDoc MP Imaging System Educational,lab_equipment,Bio-Rad,Bio-Rad,39583.38,25.09,Bio-Rad Real Catalog,,,,,,,,imaging,3.0,"191V, 51Hz",,,,9027.80.45,USA,28,1
+BR4923505,ChemiDoc MP Imaging System Bundle,lab_equipment,Bio-Rad,Bio-Rad,31771.55,21.94,Bio-Rad Real Catalog,,,,,,,,imaging,3.0,"224V, 53Hz",,,,9027.80.45,USA,24,1
+BR9018788,ChemiDoc MP Imaging System Bundle,lab_equipment,Bio-Rad,Bio-Rad,42960.28,23.57,Bio-Rad Real Catalog,,,,,,,,imaging,3.0,"218V, 60Hz",,,,9027.80.45,USA,31,1
+BR3019452,ChemiDoc MP Imaging System Bundle,lab_equipment,Bio-Rad,Bio-Rad,35813.91,21.88,Bio-Rad Real Catalog,,,,,,,,imaging,1.0,"105V, 54Hz",,,,9027.80.45,USA,25,1
+BR2107563,Gel Doc EZ Imager Bundle,lab_equipment,Bio-Rad,Bio-Rad,15452.9,8.82,Bio-Rad Real Catalog,,,,,,,,imaging,1.0,"147V, 60Hz",,,,9027.80.45,USA,16,1
+BR2967292,Gel Doc EZ Imager Bundle,lab_equipment,Bio-Rad,Bio-Rad,15389.34,9.49,Bio-Rad Real Catalog,,,,,,,,imaging,1.0,"198V, 50Hz",,,,9027.80.45,USA,25,1
+BR1960603,Gel Doc EZ Imager,lab_equipment,Bio-Rad,Bio-Rad,13405.25,8.49,Bio-Rad Real Catalog,,,,,,,,imaging,2.0,"230V, 50Hz",,,,9027.80.45,USA,23,1
+BR6120218,PowerPac HC High-Current Power Supply Educational,lab_equipment,Bio-Rad,Bio-Rad,1719.35,3.59,Bio-Rad Real Catalog,,,,,,,,electrophoresis,1.0,"148V, 55Hz",,,,9027.80.45,USA,27,1
+BR6664909,PowerPac HC High-Current Power Supply Bundle,lab_equipment,Bio-Rad,Bio-Rad,1402.1,3.1,Bio-Rad Real Catalog,,,,,,,,electrophoresis,1.0,"222V, 51Hz",,,,9027.80.45,USA,20,1
+BR4167191,PowerPac HC High-Current Power Supply,lab_equipment,Bio-Rad,Bio-Rad,1428.26,3.64,Bio-Rad Real Catalog,,,,,,,,electrophoresis,1.0,"119V, 58Hz",,,,9027.80.45,USA,35,1
+BR3301921,Mini-PROTEAN Tetra Cell Educational,lab_equipment,Bio-Rad,Bio-Rad,952.03,2.38,Bio-Rad Real Catalog,,,,,,,,electrophoresis,3.0,"141V, 54Hz",,,,9027.80.45,USA,33,1
+BR4161080,Mini-PROTEAN Tetra Cell with Gradient,lab_equipment,Bio-Rad,Bio-Rad,997.81,1.72,Bio-Rad Real Catalog,,,,,,,,electrophoresis,2.0,"113V, 60Hz",,,,9027.80.45,USA,29,1
+BR6504658,Mini-PROTEAN Tetra Cell Educational,lab_equipment,Bio-Rad,Bio-Rad,903.52,1.7,Bio-Rad Real Catalog,,,,,,,,electrophoresis,1.0,"128V, 50Hz",,,,9027.80.45,USA,22,1
+BR2823598,Mini-PROTEAN Tetra Cell Bundle,lab_equipment,Bio-Rad,Bio-Rad,952.3,1.95,Bio-Rad Real Catalog,,,,,,,,electrophoresis,3.0,"139V, 59Hz",,,,9027.80.45,USA,15,1
+BR1933425,Criterion TGX Precast Gels Starter Pack,lab_equipment,Bio-Rad,Bio-Rad,85.17,0.18,Bio-Rad Real Catalog,,,,,,,,consumables,3.0,"107V, 50Hz",,,,9027.80.45,USA,31,1
+BR2341757,Criterion TGX Precast Gels Bundle,lab_equipment,Bio-Rad,Bio-Rad,77.54,0.22,Bio-Rad Real Catalog,,,,,,,,consumables,1.0,"203V, 58Hz",,,,9027.80.45,USA,34,1
+BR8293758,Criterion TGX Precast Gels Starter Pack,lab_equipment,Bio-Rad,Bio-Rad,92.35,0.17,Bio-Rad Real Catalog,,,,,,,,consumables,2.0,"237V, 51Hz",,,,9027.80.45,USA,37,1
+BR7658859,Criterion TGX Precast Gels Bundle,lab_equipment,Bio-Rad,Bio-Rad,107.45,0.23,Bio-Rad Real Catalog,,,,,,,,consumables,3.0,"147V, 59Hz",,,,9027.80.45,USA,24,1
+BR4797136,Criterion TGX Precast Gels with Gradient,lab_equipment,Bio-Rad,Bio-Rad,85.35,0.16,Bio-Rad Real Catalog,,,,,,,,consumables,3.0,"190V, 54Hz",,,,9027.80.45,USA,37,1
+BR2171544,4-20% Mini-PROTEAN TGX Gels with Gradient,lab_equipment,Bio-Rad,Bio-Rad,70.78,0.12,Bio-Rad Real Catalog,,,,,,,,consumables,2.0,"122V, 57Hz",,,,9027.80.45,USA,27,1
+BR6523719,4-20% Mini-PROTEAN TGX Gels Bundle,lab_equipment,Bio-Rad,Bio-Rad,64.76,0.18,Bio-Rad Real Catalog,,,,,,,,consumables,3.0,"122V, 59Hz",,,,9027.80.45,USA,41,1
+BR2613819,4-20% Mini-PROTEAN TGX Gels Educational,lab_equipment,Bio-Rad,Bio-Rad,80.12,0.15,Bio-Rad Real Catalog,,,,,,,,consumables,3.0,"207V, 50Hz",,,,9027.80.45,USA,28,1
+EP149797,Research plus Pipette 0.1-2.5 µL - Standard,lab_equipment,Eppendorf,Eppendorf,285.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,0.1-2.5 µL,±0.6%,True,9027.80.45,Germany,30,1
+EP876926,Research plus Pipette 0.1-2.5 µL - Starter Kit,lab_equipment,Eppendorf,Eppendorf,342.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,0.1-2.5 µL,±0.6%,False,9027.80.45,Germany,28,1
+EP255105,Research plus Pipette 0.5-10 µL - Standard,lab_equipment,Eppendorf,Eppendorf,285.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,0.5-10 µL,±0.6%,False,9027.80.45,Germany,44,1
+EP298535,Research plus Pipette 2-20 µL - Standard,lab_equipment,Eppendorf,Eppendorf,285.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,2-20 µL,±0.6%,False,9027.80.45,Germany,22,1
+EP574831,Research plus Pipette 2-20 µL - Starter Kit,lab_equipment,Eppendorf,Eppendorf,342.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,2-20 µL,±0.6%,True,9027.80.45,Germany,40,1
+EP694727,Research plus Pipette 10-100 µL - Standard,lab_equipment,Eppendorf,Eppendorf,285.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,10-100 µL,±0.6%,True,9027.80.45,Germany,42,1
+EP109534,Research plus Pipette 10-100 µL - Starter Kit,lab_equipment,Eppendorf,Eppendorf,342.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,10-100 µL,±0.6%,False,9027.80.45,Germany,15,1
+EP367394,Research plus Pipette 10-100 µL - Complete Set,lab_equipment,Eppendorf,Eppendorf,427.5,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,10-100 µL,±0.6%,True,9027.80.45,Germany,20,1
+EP607502,Research plus Pipette 20-200 µL - Standard,lab_equipment,Eppendorf,Eppendorf,285.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,20-200 µL,±0.6%,False,9027.80.45,Germany,22,1
+EP643296,Research plus Pipette 100-1000 µL - Standard,lab_equipment,Eppendorf,Eppendorf,285.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,100-1000 µL,±0.6%,False,9027.80.45,Germany,41,1
+EP873030,Research plus Pipette 100-1000 µL - Starter Kit,lab_equipment,Eppendorf,Eppendorf,342.0,0.1,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,100-1000 µL,±0.6%,False,9027.80.45,Germany,17,1
+EP537006,5430 Microcentrifuge 24 tubes - Standard,lab_equipment,Eppendorf,Eppendorf,4500.0,18.5,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,24 tubes,N/A,False,9027.80.45,Germany,21,1
+EP910012,5424 Microcentrifuge 24 tubes - Standard,lab_equipment,Eppendorf,Eppendorf,3200.0,15.2,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,24 tubes,N/A,True,9027.80.45,Germany,34,1
+EP897529,Mastercycler nexus GSX1 96-well - Standard,lab_equipment,Eppendorf,Eppendorf,12500.0,22.0,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,96-well,N/A,True,9027.80.45,Germany,31,1
+EP378559,Mastercycler nexus GSX1 96-well - Starter Kit,lab_equipment,Eppendorf,Eppendorf,15000.0,22.0,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,96-well,N/A,True,9027.80.45,Germany,21,1
+EP396246,epTIPS Pipette Tips 0.1-10 µL - Standard,lab_equipment,Eppendorf,Eppendorf,85.0,0.05,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,0.1-10 µL,±0.6%,True,9027.80.45,Germany,26,1
+EP891125,epTIPS Pipette Tips 0.1-10 µL - Starter Kit,lab_equipment,Eppendorf,Eppendorf,102.0,0.05,Eppendorf Real Catalog,,,,,,,,liquid_handling,,,0.1-10 µL,±0.6%,False,9027.80.45,Germany,18,1

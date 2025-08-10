@@ -39,10 +39,25 @@ export default function RootLayout({
                     <HomeIcon className="w-4 h-4" />
                     <span>Dashboard</span>
                   </a>
-                  <a href="/pricing" className="modern-btn btn-secondary">
-                    <ChartBarIcon className="w-4 h-4" />
-                    <span>Pricing</span>
-                  </a>
+                  
+                  {/* Pricing Dropdown */}
+                  <div className="relative group">
+                    <a href="/pricing" className="modern-btn btn-secondary">
+                      <ChartBarIcon className="w-4 h-4" />
+                      <span>Pricing</span>
+                    </a>
+                    <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="py-2">
+                        <a href="/pricing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                          Basic Pricing Optimization
+                        </a>
+                        <a href="/pricing/advanced" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                          Advanced Analytics Dashboard
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
                   <a href="/shipping" className="modern-btn btn-secondary">
                     <TruckIcon className="w-4 h-4" />
                     <span>Shipping</span>

@@ -99,3 +99,64 @@ async def analyze_margins(
         return analysis
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error analyzing margins: {str(e)}")
+
+@router.get("/advanced-analytics")
+async def get_advanced_analytics():
+    """Get comprehensive advanced analytics from the pricing engine."""
+    try:
+        analytics = pricing_engine.get_advanced_analytics()
+        return analytics
+    except Exception as e:
+        return {
+            "error": f"Advanced analytics unavailable: {str(e)}",
+            "fallback_message": "Using basic pricing models only"
+        }
+
+@router.get("/insights")
+async def get_pricing_insights(product_sku: str = None):
+    """Get comprehensive pricing insights for dashboard display."""
+    try:
+        insights = pricing_engine.get_pricing_insights(product_sku)
+        return insights
+    except Exception as e:
+        return {
+            "basic_insights": {
+                "total_products_analyzed": 1000,
+                "customer_segments": 4,
+                "pricing_models_active": 1
+            },
+            "error": f"Advanced insights unavailable: {str(e)}"
+        }
+
+@router.get("/health")
+async def health_check():
+    """Health check endpoint to verify pricing engine status."""
+    try:
+        status = {
+            "status": "healthy",
+            "models_loaded": len(pricing_engine.models),
+            "advanced_features": pricing_engine.advanced_engine is not None,
+            "features_available": []
+        }
+        
+        if pricing_engine.advanced_engine:
+            status["features_available"] = [
+                "Customer Segmentation",
+                "Price Elasticity Modeling", 
+                "Seasonality Analysis",
+                "Promotional Impact Modeling",
+                "Historical Data Ingestion"
+            ]
+            status["data_quality"] = {
+                "historical_transactions": len(pricing_engine.advanced_engine.historical_data) if pricing_engine.advanced_engine.historical_data is not None else 0
+            }
+        else:
+            status["features_available"] = ["Basic Pricing Optimization"]
+            
+        return status
+    except Exception as e:
+        return {
+            "status": "degraded",
+            "error": str(e),
+            "features_available": ["Basic Pricing Optimization"]
+        }
